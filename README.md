@@ -1,8 +1,16 @@
 # Pivot
 
-Pivot is an application meant to change the way you plan out your day. It takes the best of task managing and calendars to make your daily life easier.
+This application's purpose is to change the way you plan out your day through time blocking, automatic task scheduling, and more. 
 
-# Key Features
+# Specification Deliverable
+
+## Elevator Pitch
+
+Are you a student or returned missionary overwhelmed by a busy schedule? **Pivot** is your new daily planner. It's like a personalized Areabook, helping you effortlessly manage class assignments, appointments, and work. Save time by consolidating all your schedules into one place. With Pivot, you can set goals, share your schedule, and pivot your plans for that date on Friday night. Don't miss out on opportunities because your schedule is full. Simplify your life and achieve more with Pivot.
+
+## Design
+
+## Key Features
 
 - Calendar
 - Goal Setting and Tracking
@@ -15,7 +23,7 @@ Pivot is an application meant to change the way you plan out your day. It takes 
 - Easy Calendar editing (Deleting, Moving, Creating Tasks)
 
 
-# Technology Use
+## Technologies
 
 - **HTML** - Uses HTML to structure the application. Three HTML pages. One for Login, One for goals, and One for Calendar.
 - CSS - Styling of the application to provide consistency, and a premium experience while using the website.
