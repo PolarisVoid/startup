@@ -10,6 +10,9 @@ Are you a student or returned missionary overwhelmed by a busy schedule? **Pivot
 
 ## Design
 
+![image](https://github.com/user-attachments/assets/ca52c1fd-3d8e-4317-86c8-3943c8357ba3)
+
+
 ## Key Features
 
 - [ ] Time Blocking Calendar
