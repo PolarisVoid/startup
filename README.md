@@ -12,16 +12,17 @@ Are you a student or returned missionary overwhelmed by a busy schedule? **Pivot
 
 ## Key Features
 
-- Calendar
-- Goal Setting and Tracking
-- Automatic Task Scheduling/Rescheduling
-- Appointment Scheduling
-- Schedule Sharing
-- Project Creation
-- Contact Importing (Addresses and Contact)
-- Map View
-- Easy Calendar editing (Deleting, Moving, Creating Tasks)
+- [ ] Time Blocking Calendar
+- [ ] Goal Setting and Tracking
+- [ ] Automatic Task Scheduling and Rescheduling
+- [ ] Easy Calendar Editing (Deleting, Moving, Creating Tasks)
+- [ ] Schedule Sharing
 
+## Future Features
+- [ ] Appointment Scheduling
+- [ ] Contact Importing (Addresses and Contact)
+- [ ] Map View
+- [ ] Task Categorizing/Orgnaization
 
 ## Technologies
 
