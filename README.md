@@ -1,12 +1,12 @@
 # Pivot
 
-This application's purpose is to change the way you plan out your day through time blocking, automatic task scheduling, and more.
+This application is designed to simplify your daily planning and organization. With powerful features like time blocking, automatic task scheduling, and more, it revolutionizes the way you manage your busy schedule. Say goodbye to the chaos of juggling multiple calendars and hello to effortless organization. The intuitive interface and seamless integration make it easy for students and returned missionaries to take control of their day. Set goals, simplify your schedule, and achieve more with ease.
 
 ## Specification Deliverable
 
 ### Elevator Pitch
 
-Are you a student or returned missionary overwhelmed by a busy schedule? **Pivot** is your new daily planner. It's like a personalized Areabook, helping you effortlessly manage class assignments, appointments, and work. Save time by consolidating all your schedules into one place. With Pivot, you can set goals, share your schedule, and pivot your plans for that date on Friday night. Don't miss out on opportunities because your schedule is full. Simplify your life and achieve more with Pivot.
+Are you a student or returned missionary overwhelmed by a busy schedule? **Pivot** is your new daily planner. It helps you effortlessly manage class assignments, appointments, and work. Save time by consolidating all your schedules into one place. With Pivot, you can set goals, share your schedule, and pivot your plans for that date on Friday night. Don't miss out on opportunities because your schedule is full. Simplify your life, boost productivity, and achieve more with Pivot - the ultimate tool for mastering your day.
 
 ### Design
 
@@ -14,19 +14,35 @@ Are you a student or returned missionary overwhelmed by a busy schedule? **Pivot
 
 ### Key Features
 
-- [ ] Time Blocking Calendar
-- [ ] Goal Setting and Tracking
-- [ ] Automatic Task Scheduling and Rescheduling
-- [ ] Easy Calendar Editing (Deleting, Moving, Creating Tasks)
-- [ ] Schedule Sharing
-
+- [ ] Time Blocking: Carve out time for events throughout the day.
+- [ ] Goal Tracking: Set and track personal goals.
+- [ ] Automatic Task Scheduling: Let the app find time for your Tasks.
+- [ ] Easy Editing: Seamlessly edit your calendar and where things go.
+- [ ] Schedule Sharing: Share your schedule with others.
+<!--
 ### Future Features
 
+- [ ] Offline Mode
 - [ ] Appointment Scheduling
 - [ ] Contact Importing (Addresses and Contact)
 - [ ] Map View
-- [ ] Task Categorizing/Orgnaization
-
+- [ ] Task Orgnaization
+- [ ] Custom Event Types
+- [ ] Team Calendars
+- [ ] Team Task Scheduling
+- [ ] Task Ticket Tracking
+- [ ] Task Breaking up (Split larger tasks into smaller parts)
+- [ ] Organizations
+- [ ] Task Ticket Flow
+- [ ] Reporting and Reviewing
+- [ ] Task Reminders
+- [ ] Task Time Optimizer (Tracks the time you take on tasks to provide real data on how long a tasks takes)
+- [ ] Plugin Support
+- [ ] Syncing with other Calendar Apps
+- [ ] Event Invitations
+- [ ] Task Dash Board (Review of their tasks, time, etc.)
+- [ ] Class Features (Homework, Exams, etc.)
+-->
 ### Technologies
 
 - **HTML** - Uses HTML to structure the application. Three HTML pages. One for Login, One for goals, and One for Calendar.
