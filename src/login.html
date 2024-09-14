@@ -11,14 +11,20 @@
             <ul>
                 <li><a href="./home.html">Home</a></li>
                 <li><a href="./calendar.html">Calendar</a></li>
+                <li><a href="./tasks.html">Tasks</a></li>
                 <li><a href="./goals.html">Goals</a></li>
-                <li><a href="./settings.html">Settings</a></li>
             </ul>
             <a href="./login.html"></a>
-            <a href="./settings.html"><img alt="Profile"></a>
+            <a href="./settings.html"><img alt="User Profile">[Username]</a>
         </nav>
         <main>
-
+            <form>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+            </form>
         </main>
     </body>
 </html>
