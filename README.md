@@ -19,6 +19,7 @@ Are you a student or returned missionary overwhelmed by a busy schedule? **Pivot
 - [ ] Automatic Task Scheduling: Let the app find time for your Tasks.
 - [ ] Easy Editing: Seamlessly edit your calendar and where things go.
 - [ ] Schedule Sharing: Share your schedule with others.
+- [ ] Project Sharing: Collaborate on projects together.
 <!--
 ### Future Features
 
