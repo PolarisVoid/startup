@@ -19,7 +19,7 @@
         </nav>
         <main>
             <h1>Calendar</h1>
-            <p>+ Task</p>
+            <p>+ Event</p>
             <p>[Current Calendar - Username]</p>
             <p>Today</p>
             <p>&leftarrow;</p>
@@ -83,6 +83,22 @@
                 <input type="checkbox" id="tasks" name="tasks" checked>
                 <label for="hidden">Hide Complete</label>
                 <input type="checkbox" id="hidden" name="hidden">
+            </form>
+            <h2>Add Event</h2>
+            <form>
+                <label for="event">Event Name</label>
+                <input type="text" id="event" name="event" required>
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date" required>
+                <label for="start_time">Start Time</label>
+                <input type="time" id="start_time" name="start_time" required>
+                <label for="end_time">End Time</label>
+                <input type="time" id="end_time" name="end_time" required>
+                <label for="location">Location</label>
+                <input type="text" id="location" name="location">
+                <label for="description">Description</label>
+                <input type="text" id="description" name="description">
+                <button type="submit">Add</button>
             </form>
         </main>
     </body>
