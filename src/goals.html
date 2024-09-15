@@ -19,7 +19,25 @@
         </nav>
         <main>
             <h1>Goals</h1>
-
+            <p>Add Goal</p>
+            <form>
+                <label for="goal_name">Goal Name</label>
+                <input type="text" id="goal_name" name="goal_name" required>
+                <label for="goal_description">Goal Description</label>
+                <input type="text" id="goal_description" name="goal_description" required>
+                <label for="goal_category">Goal Category</label>
+                <input type="text" id="goal_category" name="goal_category" required>
+                <label for="goal_due_date">Goal Due Date</label>
+                <input type="date" id="goal_due_date" name="goal_due_date" required>
+                <label for="goal_priority">Goal Priority</label>
+                <input type="number" id="goal_priority" name="goal_priority" required>
+                <button type="submit">Add Goal</button>
+            </form>
+            <h2>My Goals</h2>
+            <ul>
+                <li>Goal 1 [Pulled from DB]</li>
+                <li>Goal 2</li>
+            </ul>
         </main>
     </body>
 </html>
