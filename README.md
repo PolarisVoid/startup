@@ -56,3 +56,14 @@ Are you a student or returned missionary overwhelmed by a busy schedule? **Pivot
   - Get/Put User's Goals
 - **Database and Authentication** - Store user's login credentials, tasks, and goals in database. Register and loging users. Won't save schedule unless they have an account.
 - **Web Socket** - As users add tasks and goals, it will be displayed on their calendar. These will update as they check off tasks, finish goals, etc.
+
+## HTML Deliverables
+
+For this Deliverable, I added the static content and built the structure of my application using HTML.
+
+- [X] **HTML Pages** - Six Html Pages for settings, calendar, projects, goals, login, and the home page.
+- [X] **Links** - There is a navigation bar that links between the different pages. The Login page linkes to the calendar page.
+- [X] **Text** - Each Page contains the static text, with some pages having place holders for Database text.
+- [ ] **Images** - Each page has a link to the logo and the profile picture of the current user.
+- [X] **DB/Login** - There is a input area for login. The Calendar, Project, and Goal pages have place holders for tasks and events that will be pulled from the database.
+- [X] **WebSocket** - The Project page has a place holder for where the Tasks will be updated dynamically for shared projects.
