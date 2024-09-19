@@ -64,6 +64,6 @@ For this Deliverable, I added the static content and built the structure of my a
 - [X] **HTML Pages** - Six Html Pages for settings, calendar, projects, goals, login, and the home page.
 - [X] **Links** - There is a navigation bar that links between the different pages. The Login page linkes to the calendar page.
 - [X] **Text** - Each Page contains the static text, with some pages having place holders for Database text.
-- [ ] **Images** - Each page has a link to the logo and the profile picture of the current user.
+- [X] **Images** - Each page has a link to the logo and the profile picture of the current user.
 - [X] **DB/Login** - There is a input area for login. The Calendar, Project, and Goal pages have place holders for tasks and events that will be pulled from the database.
 - [X] **WebSocket** - The Project page has a place holder for where the Tasks will be updated dynamically for shared projects.
