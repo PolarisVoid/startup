@@ -1,4 +1,4 @@
-.root {
+:root {
     /*Purples*/
     --ultra-voilet: #654597;
     --african-violet: #9484AD;
@@ -22,4 +22,12 @@
     --platinum: #E1E1E1;
     --isabelline: #F1EBE4;
     --night: #070908;
+
+    --primary-1: var(--dark-scarlet);
+    --primary-2: var(--ultra-voilet);
+    --accent-1: var(--goldenrod);
+    --secondary-1: var(--auburn);
+    --secondary-2: var(--african-violet);
+    --white: var(--ivory);
+    --black: var(--night);
 }
