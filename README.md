@@ -67,3 +67,4 @@ For this Deliverable, I added the static content and built the structure of my a
 - [X] **Images** - Each page has a link to the logo and the profile picture of the current user.
 - [X] **DB/Login** - There is a input area for login. The Calendar, Project, and Goal pages have place holders for tasks and events that will be pulled from the database.
 - [X] **WebSocket** - The Project page has a place holder for where the Tasks will be updated dynamically for shared projects.
+- [X] **Webservice Call** - The Calendar page has a place holder for where the Webservice call will go.
