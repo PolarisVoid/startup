@@ -3,49 +3,22 @@
 
 <head>
     <title>Pivot</title>
-    <!-- Link to add icon to header bar -->
-    <!-- <link rel="" href="" type=""> -->
-    <link rel="stylesheet" type="text/css" href="./css/logo.css">
+    <link rel="icon" type="image/x-icon" href="/Pivot Logo/Pivot Icon.png">
 </head>
-<script>
-    function displayCurrentDate() {
-        let today = new Date();
-        let day = today.getDay();
-
-        // Function to get the date for a specific day of the week
-        function getDateForDay(dayOffset) {
-            let date = new Date(today);
-            date.setDate(today.getDate() + dayOffset);
-            return date.getDate();
-        }
-
-        // Set the current date for each day of the week
-        document.getElementById("Sunday_Date").innerText = "Sunday " + getDateForDay(0 - day);
-        document.getElementById("Monday_Date").innerText = "Monday " + getDateForDay(1 - day);
-        document.getElementById("Tuesday_Date").innerText = "Tuesday " + getDateForDay(2 - day);
-        document.getElementById("Wednesday_Date").innerText = "Wednesday " + getDateForDay(3 - day);
-        document.getElementById("Thursday_Date").innerText = "Thursday " + getDateForDay(4 - day);
-        document.getElementById("Friday_Date").innerText = "Friday " + getDateForDay(5 - day);
-        document.getElementById("Saturday_Date").innerText = "Saturday " + getDateForDay(6 - day);
-    }
-
-    window.onload = displayCurrentDate;
-</script>
-
 <body>
     <nav>
-        <a href="./../index.html"><img class='logo_48px' alt="Logo" src="./../Pivot Logo/Pivot Icon.png"></a>
+        <a href="/index.html"><img class='logo_48px' alt="Logo" src="/Pivot Logo/Pivot Icon.png"></a>
         <ul>
-            <li><a href="./../index.html">Home</a></li>
-            <li><a href="./calendar.html">Calendar</a></li>
-            <li><a href="./projects.html">Projects</a></li>
-            <li><a href="./goals.html">Goals</a></li>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/src/calendar.html">Calendar</a></li>
+            <li><a href="/src/projects.html">Projects</a></li>
+            <li><a href="/src/goals.html">Goals</a></li>
         </ul>
-        <a href="./login.html">Login</a>
-        <a href="./signup.html">Sign Up</a>
+        <a href="/src/login.html">Login</a>
+        <a href="/src/signup.html">Sign Up</a>
         <div class="profile">
-            <img class='logo_48px' alt="User Profile" src="./../Pivot Logo/Pivot Icon.png">
-            <a href="./settings.html">[Username]</a>
+            <img class='logo_48px' alt="User Profile" src="/Pivot Logo/Pivot Icon.png">
+            <a href="/src/settings.html">[Username]</a>
         </div>
     </nav>
     <main>
