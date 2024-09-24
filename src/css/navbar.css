@@ -66,10 +66,3 @@ nav a:hover{
 .logo a {
     text-shadow: var(--black) 1px 1px;
 }
-
-.signup {
-    background-color: var(--accent-1);
-    color: var(--black);
-    padding: 0.25em;
-    border-radius: 5px;
-}
