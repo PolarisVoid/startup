@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pivot</title>
+    <link rel="icon" type="image/x-icon" href="/Pivot Logo/Pivot Icon.png">
+    <link rel="stylesheet" type="text/css" href="/src/css/colors.css">
+    <link rel="stylesheet" type="text/css" href="/src/css/navbar.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div>
+                <div class="logo">
+                    <img class='logo_48px' alt="Logo" src="/Pivot Logo/Pivot Icon Removed Background.png">
+                    <a href="/"><h1>Pivot Calendar</h1></a>
+                </div>
+                <menu>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/src/calendar.html">Calendar</a></li>
+                    <li><a href="/src/projects.html">Projects</a></li>
+                    <li><a href="/src/goals.html">Goals</a></li>
+                </menu>
+            </div>
+            <div>
+                <div class="login">
+                    <a href="/src/login.html">Login</a>
+                    <a class="signup" href="/src/signup.html">Sign Up</a>
+                </div>
+                <div class="profile">
+                    <a href="/src/settings.html">[Username]</a>
+                    <img class='logo_48px' alt="User Profile" src="/Pivot Logo/Pivot Icon Removed Background.png">
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1>Goals</h1>
+        <p>Add Goal</p>
+        <form>
+            <label for="goal_name">Goal Name</label>
+            <input type="text" id="goal_name" name="goal_name" required><br>
+            <label for="goal_description">Goal Description</label>
+            <input type="text" id="goal_description" name="goal_description" required><br>
+            <label for="goal_category">Goal Category</label>
+            <input type="text" id="goal_category" name="goal_category" required><br>
+            <label for="goal_due_date">Goal Due Date</label>
+            <input type="date" id="goal_due_date" name="goal_due_date" required><br>
+            <label for="goal_priority">Goal Priority</label>
+            <input type="number" id="goal_priority" name="goal_priority" required><br>
+            <button type="submit">Add Goal</button>
+        </form>
+        <h2>My Goals</h2>
+        <ul>
+            <li>Goal 1 [Pulled from DB]</li>
+            <li>Goal 2</li>
+        </ul>
+    </main>
+</body>
+
+</html>

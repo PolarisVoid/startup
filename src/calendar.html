@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pivot</title>
+    <link rel="icon" type="image/x-icon" href="/Pivot Logo/Pivot Icon.png">
+    <link rel="stylesheet" type="text/css" href="/src/css/colors.css">
+    <link rel="stylesheet" type="text/css" href="/src/css/navbar.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div>
+                <div class="logo">
+                    <img class='logo_48px' alt="Logo" src="/Pivot Logo/Pivot Icon Removed Background.png">
+                    <a href="/"><h1>Pivot Calendar</h1></a>
+                </div>
+                <menu>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/src/calendar.html">Calendar</a></li>
+                    <li><a href="/src/projects.html">Projects</a></li>
+                    <li><a href="/src/goals.html">Goals</a></li>
+                </menu>
+            </div>
+            <div>
+                <div class="login">
+                    <a href="/src/login.html">Login</a>
+                    <a class="signup" href="/src/signup.html">Sign Up</a>
+                </div>
+                <div class="profile">
+                    <a href="/src/settings.html">[Username]</a>
+                    <img class='logo_48px' alt="User Profile" src="/Pivot Logo/Pivot Icon Removed Background.png">
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1>Calendar</h1>
+        <p>+ Event</p>
+        <p>[Current Calendar - Username]</p>
+        <p>Today</p>
+        <p>&leftarrow;</p>
+        <p>&rightarrow;</p>
+        <p>September 2024</p>
+        <p>Week</p>
+        <p>Filters</p>
+        <p>Share [Google webservice call or sharing between people]</p>
+        <ul>
+            <li id="Sunday_Date">Sunday 8</li>
+            <li id="Monday_Date">Monday 9</li>
+            <li id="Tuesday_Date">Tuesday 10</li>
+            <li id="Wednesday_Date">Wednesday 11</li>
+            <li id="Thursday_Date">Thursday 12</li>
+            <li id="Friday_Date">Friday 13</li>
+            <li id="Saturday_Date">Saturday 14</li>
+        </ul>
+        <ul>
+            <li>12:00</li>
+            <li>1:00</li>
+            <li>2:00</li>
+            <li>3:00</li>
+            <li>4:00</li>
+            <li>5:00</li>
+            <li>6:00</li>
+            <li>7:00</li>
+            <li>8:00</li>
+            <li>9:00</li>
+            <li>10:00</li>
+            <li>11:00</li>
+            <li>12:00</li>
+            <li>1:00</li>
+            <li>2:00</li>
+            <li>3:00</li>
+            <li>4:00</li>
+            <li>5:00</li>
+            <li>6:00</li>
+            <li>7:00</li>
+            <li>8:00</li>
+            <li>9:00</li>
+            <li>10:00</li>
+            <li>11:00</li>
+            <li>12:00</li>
+        </ul>
+        <h1>Data Base Data in Calendar</h1>
+        <h2>Current Calendar</h2>
+        <form>
+            <label for="personal">Personal</label>
+            <input type="checkbox" id="personal" name="personal"><br>
+            <label for="school">School</label>
+            <input type="checkbox" id="school" name="school"><br>
+            <label for="work">Work</label>
+            <input type="checkbox" id="work" name="work"><br>
+            <label for="other1">Shared Calender 1</label>
+            <input type="checkbox" id="other1" name="other1"><br>
+            <label for="other2">Shared Calender 1</label>
+            <input type="checkbox" id="other2" name="other2"><br>
+        </form>
+        <h2>Filter</h2>
+        <form>
+            <label for="tasks">Display Tasks</label>
+            <input type="checkbox" id="tasks" name="tasks" checked><br>
+            <label for="hidden">Hide Complete</label>
+            <input type="checkbox" id="hidden" name="hidden"><br>
+        </form>
+        <h2>Add Event</h2>
+        <form>
+            <label for="event">Event Name</label>
+            <input type="text" id="event" name="event" required><br>
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" required><br>
+            <label for="start_time">Start Time</label>
+            <input type="time" id="start_time" name="start_time" required><br>
+            <label for="end_time">End Time</label>
+            <input type="time" id="end_time" name="end_time" required><br>
+            <label for="location">Location</label>
+            <input type="text" id="location" name="location"><br>
+            <label for="description">Description</label>
+            <input type="text" id="description" name="description"><br>
+            <button type="submit">Add</button>
+        </form>
+    </main>
+</body>
+
+</html>
