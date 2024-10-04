@@ -10,13 +10,13 @@
     <link rel="stylesheet" type="text/css" href="/src/css/navbar.css">
     <link rel="stylesheet" type="text/css" href="/src/css/footer.css">
 </head>
-<body>
+<body class="overflow-hidden">
     <nav class="navbar navbar-expand bg-red-gradient" id="desktop-nav">
         <div class="container-fluid">
-            <div class="container-left">
+            <div class="container-left align-middle">
                 <div class="justify-content-left">
                     <img class='nav-brand' style="width:48px;" alt="Logo" src="/Pivot Logo/Pivot Icon Removed Background.png">
-                    <a class ="nav-link golden" href="/"><h1>Pivot</h1></a>
+                    <a class ="nav-link golden" href="/"><h3>Pivot</h3></a>
                 </div>
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link golden" href="/">Home</a></li>
@@ -47,56 +47,118 @@
             </ul>
         </div>
     </nav>
-    <main>
-        <h1>Tasks</h1>
-        <h1>Data Base Data in Projects</h1>
-        <h2>My Projects</h2>
-        <ul>
-            <li>My Project 1</li>
-            <li>My Project 2</li>
-        </ul>
-        <h2>Shared Projects</h2>
-        <ul>
-            <li>Project 1</li>
-            <li>Project 2</li>
-        </ul>
-        <section>
-            <h2>[Project Name]</h2>
-            <p>Web Socket for Shared Task Projects</p>
-            <ul>
-                <li>List</li>
-                <li>Task Flows</li>
-                <li>Boards</li>
-            </ul>
-            <div>
-                <h3>[Category Name]</h3>
-                <ul>
-                    <li>
-                        <p>Name</p>
-                        <p>Assigned To</p>
-                        <p>Due Date</p>
-                        <p>Priority</p>
-                        <p>Start Time</p>
-                        <p>End Time</p>
-                        <p>Begin Scheduling Date</p>
-                    </li>
-                    <h1>Data Base Data in Tasks for Project</h1>
-                    <li>
-                        <p>[Task Name]</p>
-                        <p>[Assigned To]</p>
-                        <p>[Due Date]</p>
-                        <p>[Priority]</p>
-                        <p>[Start Time]</p>
-                        <p>[End Time]</p>
-                        <p>[Begin Scheduling Date]</p>
-                    </li>
-                    <li>
-                        <p>Add Task</p>
-                    </li>
-                </ul>
+    <main style="height: 92vh; max-height: 92vh;">
+        <div class="row container-fluid p-0 m-0" style="height: 100%">
+            <div class="col-1 bg-primary pe-0">
+                <div id="accordion">
+                    <div class="card-header">
+                        <a class="btn btn-sm btn-block btn-outline-none text-start border-bottom rounded-0 w-100 golden" data-bs-toggle="collapse" href="#myProjects">
+                            My Projects
+                        </a>
+                    </div>
+                    <div id="myProjects" class="collapse">
+                        <div class="card-body">
+                            <button class="btn btn-sm">Unassigned Tasks</button>
+                            [DataBase Pull]
+                            <button class="btn btn-sm">Add Project</button>
+                        </div>
+                    </div>
+                    <div class="card-header">
+                        <a class="btn btn-sm btn-block btn-outline-none text-start border-bottom rounded-0 w-100 golden" data-bs-toggle="collapse" href="#sharedProjects">
+                            Shared Projects
+                        </a>
+                    </div>
+                    <div id="sharedProjects" class="collapse">
+                        <div class="card-body">
+                            [DataBase Pull]
+                        </div>
+                    </div>
+                  </div>         
             </div>
-        </section>
+            <div class="col vh-100 overflow-scroll ps-3">
+                <h1>Project Name</h1>
+                <p>Add Task</p>
+                <ul>
+                    <li>List</li>
+                    <li>Task Flows</li>
+                    <li>Boards</li>
+                </ul>
+                <h2>Section Heading</h2>
+                <div class="table-responsive">
+                    <table class="table table-hover table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Task Name</th>
+                                <th>Assigned To</th>
+                                <th>Due Date</th>
+                                <th>Priority</th>
+                                <th>Start Time</th>
+                                <th>End Time</th>
+                                <th>Begin Scheduling Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><button class="btn p-0 text-dark btn-outline-none">Example Task 1</button></td>
+                                <td><button class="btn p-0 text-dark btn-outline-none">[Username]</button></td>
+                                <td><button class="btn p-0 text-dark btn-outline-none">Tuesday</button></td>
+                                <td><button class="btn p-0 text-dark btn-outline-none">High</button></td>
+                                <td><button class="btn p-0 text-dark btn-outline-none">7:00 pm</button></td>
+                                <td><button class="btn p-0 text-dark btn-outline-none">8:00 pm</button></td>
+                                <td><button class="btn p-0 text-dark btn-outline-none">Monday</button></td>
+                            </tr>
+                            <tr>
+                                <td><button class="btn p-0 text-muted btn-outline-none">Add Task</button></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2>Section Heading</h2>
+                <p>Websocket For Shared Projects</p>
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Task Name</th>
+                                <th>Assigned To</th>
+                                <th>Due Date</th>
+                                <th>Priority</th>
+                                <th>Start Time</th>
+                                <th>End Time</th>
+                                <th>Begin Scheduling Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Example Task 1</td>
+                                <td>In Progress</td>
+                                <td>2024-10-10</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><button class="btn p-0 text-muted btn-outline-none">Add Task</button></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
-
 </html>
