@@ -1,0 +1,24 @@
+.weekdays {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px;
+}
+
+.weekdays > h3 {
+    width: 100%;
+    margin: 0;
+    border: .01em solid var(--black);
+    text-align: center;
+}
+
+.times {
+    text-decoration: none;
+    list-style-type: none;
+    padding: 0 .5em 0 .2em;
+    padding-top: 1em;
+}
+
+.grid {
+    height: calc(100% - .5em - 0.01em - 3em);
+    border: .01em solid var(--black);
+}

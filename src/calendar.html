@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="/src/css/colors.css">
     <link rel="stylesheet" type="text/css" href="/src/css/navbar.css">
     <link rel="stylesheet" type="text/css" href="/src/css/footer.css">
+    <link rel="stylesheet" type="text/css" href="/src/css/calendar.css">
 </head>
 <body>
     <nav class="navbar navbar-expand bg-red-gradient" id="desktop-nav">
@@ -48,53 +49,84 @@
         </div>
     </nav>
     <main>
-        <h1>Calendar</h1>
-        <p>+ Event</p>
-        <p>[Current Calendar - Username]</p>
-        <p>Today</p>
-        <p>&leftarrow;</p>
-        <p>&rightarrow;</p>
-        <p>September 2024</p>
-        <p>Week</p>
-        <p>Filters</p>
-        <p>Share [Google webservice call or sharing between people]</p>
-        <ul>
-            <li id="Sunday_Date">Sunday 8</li>
-            <li id="Monday_Date">Monday 9</li>
-            <li id="Tuesday_Date">Tuesday 10</li>
-            <li id="Wednesday_Date">Wednesday 11</li>
-            <li id="Thursday_Date">Thursday 12</li>
-            <li id="Friday_Date">Friday 13</li>
-            <li id="Saturday_Date">Saturday 14</li>
-        </ul>
-        <ul>
-            <li>12:00</li>
-            <li>1:00</li>
-            <li>2:00</li>
-            <li>3:00</li>
-            <li>4:00</li>
-            <li>5:00</li>
-            <li>6:00</li>
-            <li>7:00</li>
-            <li>8:00</li>
-            <li>9:00</li>
-            <li>10:00</li>
-            <li>11:00</li>
-            <li>12:00</li>
-            <li>1:00</li>
-            <li>2:00</li>
-            <li>3:00</li>
-            <li>4:00</li>
-            <li>5:00</li>
-            <li>6:00</li>
-            <li>7:00</li>
-            <li>8:00</li>
-            <li>9:00</li>
-            <li>10:00</li>
-            <li>11:00</li>
-            <li>12:00</li>
-        </ul>
-        <h1>Data Base Data in Calendar</h1>
+        <div class="calendar">
+            <div class="calendar-header">
+                <div class="calender-nav d-flex justify-content-between align-items-center">
+                    <div class="d-flex justify-content-between align-items-center w-50">
+                        <button class="btn btn-primary" id="prev-week">&leftarrow;</button>
+                        <h2 id="current-day">7th September 2024</h2>
+                        <button class="btn btn-primary" id="next-week">&rightarrow;</button>
+                    </div>
+                    <div>
+                        <button class="btn btn-primary">Current Calendar</button>
+                        <button class="btn btn-primary">Add Event</button>
+                        <button class="btn btn-primary">Filters</button>
+                        <button class="btn btn-primary">Share</button>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="calendar-body d-flex vw-100">
+                <div class="times-container">
+                    <ul class="times">
+                        <li>&nbsp;</li>
+                        <li>12:00</li>
+                        <li>1:00</li>
+                        <li>2:00</li>
+                        <li>3:00</li>
+                        <li>4:00</li>
+                        <li>5:00</li>
+                        <li>6:00</li>
+                        <li>7:00</li>
+                        <li>8:00</li>
+                        <li>9:00</li>
+                        <li>10:00</li>
+                        <li>11:00</li>
+                        <li>12:00</li>
+                        <li>1:00</li>
+                        <li>2:00</li>
+                        <li>3:00</li>
+                        <li>4:00</li>
+                        <li>5:00</li>
+                        <li>6:00</li>
+                        <li>7:00</li>
+                        <li>8:00</li>
+                        <li>9:00</li>
+                        <li>10:00</li>
+                        <li>11:00</li>
+                    </ul>
+                </div>
+                <div class="w-100">
+                    <div class="weekdays">
+                        <h3>Sunday</h3>
+                        <h3>Monday</h3>
+                        <h3>Tuesday</h3>
+                        <h3>Wednesday</h3>
+                        <h3>Thursday</h3>
+                        <h3>Friday</h3>
+                        <h3>Saturday</h3>
+                    </div>
+                    <div class="grid">
+                        <div class="day">
+                        </div>
+                        <div class="day">
+                        </div>
+                        <div class="day">
+                        </div>
+                        <div class="day">
+                        </div>
+                        <div class="day">
+                        </div>
+                        <div class="day">
+                        </div>
+                        <div class="day">
+                        </div>
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </main>
+    <main>       
         <h2>Current Calendar</h2>
         <form>
             <label for="personal">Personal</label>
@@ -132,6 +164,6 @@
             <button type="submit">Add</button>
         </form>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
-
 </html>
