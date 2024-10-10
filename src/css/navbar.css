@@ -39,12 +39,6 @@ body {
     box-sizing: border-box;
 }
 
-header {
-    background: linear-gradient(var(--primary-1), var(--secondary-1));
-    padding: 10px 25px;
-    border-bottom: 1px solid var(--black);
-}
-
 nav {
     display: flex;
     justify-content: space-between;
