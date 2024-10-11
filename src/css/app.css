@@ -24,9 +24,10 @@
     --night: #070908;
 
     --primary-1: var(--dark-scarlet);
+    --primary-1: var(--dark-scarlet);
     --primary-2: var(--ultra-voilet);
     --accent-1: var(--goldenrod);
-    --secondary-1: var(--auburn);
+    --secondary-1: var(--rosewood);
     --secondary-2: var(--african-violet);
     --white: var(--ivory);
     --black: var(--night);
@@ -39,5 +40,26 @@
 
 .viewport {
     height: calc(100% - 60px);
+    background-color: var(--white);
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+}
+
+.golden {
+    color: var(--accent-1);
+}
+
+.golden:hover {
+    color: var(--white);
+}
+
+.bg-red-gradient {
+    background: linear-gradient(var(--primary-1), var(--secondary-1));
+}
+
+.bg-white {
     background-color: var(--white);
 }

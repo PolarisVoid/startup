@@ -1,18 +1,4 @@
-.golden {
-    color: var(--accent-1);
-}
 
-.golden:hover {
-    color: var(--white);
-}
-
-.bg-red-gradient {
-    background: linear-gradient(var(--primary-1), var(--secondary-1));
-}
-
-.bg-white {
-    background-color: var(--white);
-}
 
 @media (min-width: 800px) {
     #desktop-nav {

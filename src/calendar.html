@@ -68,17 +68,23 @@
         <main class="viewport">
             <div class="calendar">
                 <div class="calendar-header">
-                    <div class="calender-nav d-flex justify-content-between align-items-center">
+                    <div class="calender-nav d-flex justify-content-between align-items-center pt-2">
                         <div class="d-flex justify-content-between align-items-center w-50">
-                            <button class="btn btn-primary" id="prev-week">&leftarrow;</button>
+                            <button class="btn btn-primary btn-primary-1" id="prev-week">&leftarrow;</button>
                             <h2 id="current-day">7th September</h2>
-                            <button class="btn btn-primary" id="next-week">&rightarrow;</button>
+                            <button class="btn btn-primary btn-primary-1" id="next-week">&rightarrow;</button>
                         </div>
-                        <div class="btn-group btn-group" role="group">
-                            <button type="button" class="btn btn-primary">Current Calendar</button>
-                            <button type="button" class="btn btn-primary">Add Event</button>
-                            <button type="button" class="btn btn-primary">Filter</button>
-                            <button type="button" class="btn btn-primary">Share</button>
+                        <div id="text-button-group" class="btn-group" role="group">
+                            <button type="button" class="btn btn-primary btn-primary-1">Current Calendar</button>
+                            <button type="button" class="btn btn-primary btn-primary-1">Add Event</button>
+                            <button type="button" class="btn btn-primary btn-primary-1">Filter</button>
+                            <button type="button" class="btn btn-primary btn-primary-1">Share</button>
+                        </div>
+                        <div id="icon-button-group" class="btn-group" role="group">
+                            <button type="button" class="btn btn-primary btn-primary-1"><img class="icon" src="/icons/square-list-svgrepo-com.svg"></button>
+                            <button type="button" class="btn btn-primary btn-primary-1"><img class="icon" src="/icons/plus-svgrepo-com.svg"></button>
+                            <button type="button" class="btn btn-primary btn-primary-1"><img class="icon" src="/icons/filter-svgrepo-com.svg"></button>
+                            <button type="button" class="btn btn-primary btn-primary-1"><img class="icon" src="/icons/arrow-up-from-bracket-svgrepo-com.svg"></button>
                         </div>
                     </div>       
                 </div>
