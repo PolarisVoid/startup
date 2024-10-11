@@ -10,6 +10,10 @@
     background: linear-gradient(var(--primary-1), var(--secondary-1));
 }
 
+.bg-white {
+    background-color: var(--white);
+}
+
 @media (min-width: 800px) {
     #desktop-nav {
         display: block;
@@ -83,4 +87,24 @@ nav a:hover{
 
 .logo a {
     text-shadow: var(--black) 1px 1px;
+}
+
+.nav-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.nav-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.nav-icon-text {
+    font-size: 12px;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+    color: var(--accent-1);
 }

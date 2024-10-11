@@ -31,3 +31,13 @@
     --white: var(--ivory);
     --black: var(--night);
 }
+
+.app {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.viewport {
+    height: calc(100% - 60px);
+    background-color: var(--white);
+}
