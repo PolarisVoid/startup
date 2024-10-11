@@ -32,18 +32,6 @@
     width: 50px;
 }
 
-.btn-primary-1 {
-    background-color: var(--primary-1);
-    border-color: var(--primary-1);
-    color: var(--accent-1);
-}
-
-.btn-primary-1:hover {
-    background-color: var(--secondary-1);
-    border-color: var(--secondary-1);
-    color: var(--white);
-}
-
 @media (min-width: 800px) {
     #text-button-group {
         display: inherit;
