@@ -43,6 +43,17 @@
     background-color: var(--white);
 }
 
+body {
+    font-family: Calibri;
+    background-color: var(--white);
+    color: var(--black);
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .icon {
     width: 24px;
     height: 24px;

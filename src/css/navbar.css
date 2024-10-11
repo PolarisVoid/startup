@@ -18,61 +18,14 @@
     }
 }
 
-body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: var(--white);
-    color: var(--black);
-    font-size: 16px;
-    line-height: 1.5;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 nav div {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
-}
-
-nav a {
-    text-decoration: none;
-    color: var(--accent-1);
-    padding: 5px 10px;
-    margin: 0 5px;
-}
-
-nav a:hover{
-    color: var(--white);
-}
-
-.logo, .profile {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo img, .profile img {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-}
-
-.logo a {
-    text-shadow: var(--black) 1px 1px;
+.logo-icon  {
+    width: 36px;
 }
 
 .nav-icon-container {
