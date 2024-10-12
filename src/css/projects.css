@@ -1,0 +1,49 @@
+
+
+@media (min-width: 800px) {
+    #larger-window-menu {
+        display: block;
+    }
+    #smaller-window-menu {
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+    #larger-window-menu {
+        display: none;
+    }
+    #smaller-window-menu {
+        display: block;
+    }
+}
+
+.project-container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+}
+
+.project-menu, .project-menu>div {
+    height: 100%;
+    width: 150px;
+}
+
+.project-window {
+    height: 100%;
+    overflow-y: scroll;
+}
+
+@media (min-width: 800px) {
+    .project-window {
+        width: calc(100% - 150px);
+    }
+}
+
+@media (max-width: 800px) {
+    .project-window {
+        width: 100%;
+    }
+}
+

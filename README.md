@@ -68,3 +68,15 @@ For this Deliverable, I added the static content and built the structure of my a
 - [X] **DB/Login** - There is a input area for login. The Calendar, Project, and Goal pages have place holders for tasks and events that will be pulled from the database.
 - [X] **WebSocket** - The Project page has a place holder for where the Tasks will be updated dynamically for shared projects.
 - [X] **Webservice Call** - The Calendar page has a place holder for where the Webservice call will go.
+
+
+## CSS Deliverables
+
+For this Deliverable, I added CSS and Bootstrap to style the web page and give it an application feel.
+
+- [X] **Header, Footer, and Main content** - Main page is going to have more of a langing page feel. Calendar, Project, and Goals page, have a simle design for their needs.
+- [X] **Navigation elements** - There is a nav bar on every page and it switched to a bottom nav for mobile.
+- [X] **Responsive to window resizing** - There is slightly different layout for both mobile and desktop starting around 800px. 
+- [X] **Application elements** - Used good contrast and styled the page to fit more like an app rather than a website. That is why the entire space is used.
+- [X] **Application text content** - Consistent fonts
+- [X] **Application images** - Added Icon SVG images to the nav for mobile and styled the logo and profile place holder for Desktop nav

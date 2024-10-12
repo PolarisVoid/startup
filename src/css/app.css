@@ -1,0 +1,88 @@
+:root {
+    /*Purples*/
+    --ultra-voilet: #654597;
+    --african-violet: #9484AD;
+    --royal-purple: #6c3baa;
+
+    /*Golds*/
+    --golden-brown: #A06C2C;
+    --dark-goldenrod: #A06C2C;
+    --goldenrod: #D0A216;
+    --saffron: #E8BD0B;
+    --gold: #FFD700;
+
+    /*Reds*/
+    --auburn: #973835;
+    --rosewood: #510D0A;
+    --dark-scarlet: #560319;
+
+    /*Shades*/
+    --ivory: #FFFEEB;
+    --silver: #C3C3C3;
+    --platinum: #E1E1E1;
+    --isabelline: #F1EBE4;
+    --night: #070908;
+
+    --primary-1: var(--dark-scarlet);
+    --primary-1: var(--dark-scarlet);
+    --primary-2: var(--ultra-voilet);
+    --accent-1: var(--goldenrod);
+    --secondary-1: var(--rosewood);
+    --secondary-2: var(--african-violet);
+    --white: var(--ivory);
+    --black: var(--night);
+}
+
+.app {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.viewport {
+    height: calc(100% - 60px);
+    background-color: var(--white);
+}
+
+body {
+    font-family: Calibri;
+    background-color: var(--white);
+    color: var(--black);
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+}
+
+.golden {
+    color: var(--accent-1);
+}
+
+.golden:hover {
+    color: var(--white);
+}
+
+.bg-red-gradient {
+    background: linear-gradient(var(--primary-1), var(--secondary-1));
+}
+
+.bg-white {
+    background-color: var(--white);
+}
+
+.btn-primary-1 {
+    background-color: var(--primary-1);
+    border-color: var(--primary-1);
+    color: var(--accent-1);
+}
+
+.btn-primary-1:hover {
+    background-color: var(--secondary-1);
+    border-color: var(--secondary-1);
+    color: var(--white);
+}
