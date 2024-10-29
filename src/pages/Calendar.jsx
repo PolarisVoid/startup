@@ -373,43 +373,43 @@ function Calendar() {
 
 {
   /*
-<!-- <section class="forms">
+<section class="forms">
 <h2>Current Calendar</h2>
 <form>
     <label for="personal">Personal</label>
-    <input type="checkbox" id="personal" name="personal"><br>
+    <input type="checkbox" id="personal" name="personal" /><br />
     <label for="school">School</label>
-    <input type="checkbox" id="school" name="school"><br>
+    <input type="checkbox" id="school" name="school" /><br />
     <label for="work">Work</label>
-    <input type="checkbox" id="work" name="work"><br>
+    <input type="checkbox" id="work" name="work" /><br />
     <label for="other1">Shared Calender 1</label>
-    <input type="checkbox" id="other1" name="other1"><br>
+    <input type="checkbox" id="other1" name="other1" /><br />
     <label for="other2">Shared Calender 1</label>
-    <input type="checkbox" id="other2" name="other2"><br>
+    <input type="checkbox" id="other2" name="other2" /><br />
 </form>
 <h2>Filter</h2>
 <form>
     <label for="tasks">Display Tasks</label>
-    <input type="checkbox" id="tasks" name="tasks" checked><br>
+    <input type="checkbox" id="tasks" name="tasks" checked /><br />
     <label for="hidden">Hide Complete</label>
-    <input type="checkbox" id="hidden" name="hidden"><br>
+    <input type="checkbox" id="hidden" name="hidden" /><br />
 </form>
 <h2>Add Event</h2>
 <form>
     <label for="event">Event Name</label>
-    <input type="text" id="event" name="event" required><br>
+    <input type="text" id="event" name="event" required /><br />
     <label for="date">Date</label>
-    <input type="date" id="date" name="date" required><br>
+    <input type="date" id="date" name="date" required /><br />
     <label for="start_time">Start Time</label>
-    <input type="time" id="start_time" name="start_time" required><br>
+    <input type="time" id="start_time" name="start_time" required /><br />
     <label for="end_time">End Time</label>
-    <input type="time" id="end_time" name="end_time" required><br>
+    <input type="time" id="end_time" name="end_time" required /><br />
     <label for="location">Location</label>
-    <input type="text" id="location" name="location"><br>
+    <input type="text" id="location" name="location" /><br />
     <label for="description">Description</label>
-    <input type="text" id="description" name="description"><br>
+    <input type="text" id="description" name="description" /><br />
     <button type="submit">Add</button>
 </form>
-</section> --> */
+</section>*/
 }
 export default Calendar;

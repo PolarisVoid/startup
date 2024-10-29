@@ -44,6 +44,14 @@
     overflow-y: scroll;
 }
 
+.viewport-100 {
+    height: calc(100vh - 60px);
+}
+
+.viewport-50 {
+    height: calc(100vh - 60px);
+}
+
 body {
     font-family: Calibri;
     background-color: var(--white);

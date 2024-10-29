@@ -8,7 +8,6 @@ import Goals from "./pages/Goals";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Settings from "./pages/Settings";
-import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -19,16 +18,15 @@ function App() {
           <main className="vh-100">
             <Routes>
               <Route path="/" element={<Home />} exact />
-              <Route path="/calendar" element={<Calendar />} exact />
-              <Route path="/projects" element={<Projects />} exact />
-              <Route path="/goals" element={<Goals />} exact />
-              <Route path="/login" element={<Login />} exact />
-              <Route path="/signup" element={<Signup />} exact />
-              <Route path="/settings" element={<Settings />} exact />
+              <Route path="/calendar" element={<Calendar />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/goals" element={<Goals />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/settings" element={<Settings />} />
               <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
           </main>
-          <Footer />
         </div>
       </div>
     </BrowserRouter>
