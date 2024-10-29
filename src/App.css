@@ -39,8 +39,9 @@
 }
 
 .viewport {
-    height: calc(100% - 60px);
+    height: calc(100vh - 60px);
     background-color: var(--white);
+    overflow-y: scroll;
 }
 
 body {
@@ -61,10 +62,6 @@ body {
 
 .golden {
     color: var(--accent-1);
-}
-
-.golden:hover {
-    color: var(--white);
 }
 
 .bg-red-gradient {

@@ -1,0 +1,8 @@
+.golden-link {
+    color: var(--accent-1);
+    text-decoration: none;
+}
+
+.golden-link:hover {
+    color: var(--white);
+}
