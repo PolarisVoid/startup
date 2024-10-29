@@ -21,6 +21,7 @@ Are you a student or returned missionary overwhelmed by a busy schedule? **Pivot
 - [ ] Schedule Sharing: Share your schedule with others.
 - [ ] Project Sharing: Collaborate on projects together.
 <!--
+
 ### Future Features
 
 - [ ] Offline Mode
@@ -43,7 +44,8 @@ Are you a student or returned missionary overwhelmed by a busy schedule? **Pivot
 - [ ] Event Invitations
 - [ ] Task Dash Board (Review of their tasks, time, etc.)
 - [ ] Class Features (Homework, Exams, etc.)
--->
+      -->
+
 ### Technologies
 
 - **HTML** - Uses HTML to structure the application. Three HTML pages. One for Login, One for goals, and One for Calendar.
@@ -61,22 +63,21 @@ Are you a student or returned missionary overwhelmed by a busy schedule? **Pivot
 
 For this Deliverable, I added the static content and built the structure of my application using HTML.
 
-- [X] **HTML Pages** - Six Html Pages for settings, calendar, projects, goals, login, and the home page.
-- [X] **Links** - There is a navigation bar that links between the different pages. The Login page linkes to the calendar page.
-- [X] **Text** - Each Page contains the static text, with some pages having place holders for Database text.
-- [X] **Images** - Each page has a link to the logo and the profile picture of the current user.
-- [X] **DB/Login** - There is a input area for login. The Calendar, Project, and Goal pages have place holders for tasks and events that will be pulled from the database.
-- [X] **WebSocket** - The Project page has a place holder for where the Tasks will be updated dynamically for shared projects.
-- [X] **Webservice Call** - The Calendar page has a place holder for where the Webservice call will go.
-
+- [x] **HTML Pages** - Six Html Pages for settings, calendar, projects, goals, login, and the home page.
+- [x] **Links** - There is a navigation bar that links between the different pages. The Login page linkes to the calendar page.
+- [x] **Text** - Each Page contains the static text, with some pages having place holders for Database text.
+- [x] **Images** - Each page has a link to the logo and the profile picture of the current user.
+- [x] **DB/Login** - There is a input area for login. The Calendar, Project, and Goal pages have place holders for tasks and events that will be pulled from the database.
+- [x] **WebSocket** - The Project page has a place holder for where the Tasks will be updated dynamically for shared projects.
+- [x] **Webservice Call** - The Calendar page has a place holder for where the Webservice call will go.
 
 ## CSS Deliverables
 
 For this Deliverable, I added CSS and Bootstrap to style the web page and give it an application feel.
 
-- [X] **Header, Footer, and Main content** - Main page is going to have more of a langing page feel. Calendar, Project, and Goals page, have a simle design for their needs.
-- [X] **Navigation elements** - There is a nav bar on every page and it switched to a bottom nav for mobile.
-- [X] **Responsive to window resizing** - There is slightly different layout for both mobile and desktop starting around 800px. 
-- [X] **Application elements** - Used good contrast and styled the page to fit more like an app rather than a website. That is why the entire space is used.
-- [X] **Application text content** - Consistent fonts
-- [X] **Application images** - Added Icon SVG images to the nav for mobile and styled the logo and profile place holder for Desktop nav
+- [x] **Header, Footer, and Main content** - Main page is going to have more of a langing page feel. Calendar, Project, and Goals page, have a simle design for their needs.
+- [x] **Navigation elements** - There is a nav bar on every page and it switched to a bottom nav for mobile.
+- [x] **Responsive to window resizing** - There is slightly different layout for both mobile and desktop starting around 800px.
+- [x] **Application elements** - Used good contrast and styled the page to fit more like an app rather than a website. That is why the entire space is used.
+- [x] **Application text content** - Consistent fonts
+- [x] **Application images** - Added Icon SVG images to the nav for mobile and styled the logo and profile place holder for Desktop nav
