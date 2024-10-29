@@ -8,7 +8,7 @@
   }
   
   .empty-jar {
-    background-image: url(../assets/images/empty-jar.jpg);
+    background-image: url("../assets/images/empty-jar.jpg");
     background-attachment: fixed;
     background-size: cover;
     display: grid;
@@ -17,7 +17,7 @@
   }
   
   .rocks {
-    background-image: url(../assets/images/rocks.webp);
+    background-image: url("../assets/images/rocks.webp");
     background-attachment: fixed;
     background-size: cover;
     display: grid;
@@ -26,7 +26,7 @@
   }
   
   .pebbles {
-    background-image: url(../assets/images/pebbles.webp);
+    background-image: url("../assets/images/pebbles.webp");
     background-attachment: fixed;
     background-size: cover;
     display: grid;
@@ -35,7 +35,7 @@
   }
   
   .sand {
-    background-image: url(../assets/images/sand.webp);
+    background-image: url("../assets/images/sand.webp");
     background-attachment: fixed;
     background-size: cover;
     display: grid;
@@ -44,7 +44,7 @@
   }
   
   .filled-jar {
-    background-image: url(../assets/images/filled-jar.webp);
+    background-image: url("../assets/images/filled-jar.webp");
     background-attachment: fixed;
     background-size: cover;
     display: grid;
