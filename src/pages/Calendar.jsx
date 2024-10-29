@@ -1,3 +1,5 @@
+import "./Calendar.css";
+
 function Calendar() {
   return (
     <div class="calendar">
