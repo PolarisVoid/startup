@@ -1,5 +1,6 @@
 import React from "react";
 import "./Home.css";
+import Footer from "../components/Footer";
 
 function SectionPicture({title, analogy, description, img}) {
   let styling = "viewport-50 d-flex align-items-center justify-content-center";
@@ -193,6 +194,7 @@ function Home() {
         </div>
       </div>
     </section>
+    <Footer />
     </>
   );
 }
