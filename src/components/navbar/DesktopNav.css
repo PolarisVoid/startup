@@ -1,0 +1,24 @@
+.logo-container {
+    height: 100%;
+    padding-left: 20px;
+}
+
+.nav-items-list {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.profile-image-container {
+    height: 100%;
+    padding-right: 20px;
+}
+
+.margin-left {
+    margin-left: 5px;
+}
+
+.margin-right {
+    margin-right: 5px;
+}

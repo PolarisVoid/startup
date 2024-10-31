@@ -4,7 +4,7 @@ import { AuthState } from "./javascript/authState";
 import Navbar from "./components/navbar/Navbar";
 import "./App.css";
 import Home from "./pages/Home";
-import Calendar from "./pages/Calendar";
+import Calendar from "./pages/Calendar/Calendar";
 import Projects from "./pages/Projects";
 import Goals from "./pages/Goals";
 import Login from "./pages/Login";
@@ -30,12 +30,12 @@ function App() {
       <div className="app">
         <Navbar userName={userName} authState={authState} />
         <div className="viewport">
-          <main className="vh-100">
+          <main className="h-100">
             <Routes>
               <Route path="/" element={<Home />} exact />
               <Route path="/calendar" element={<Calendar />} />
               <Route path="/projects" element={<Projects />} />
-              <Route path="/goals" element={<Goals />} />
+              {/* <Route path="/goals" element={<Goals />} /> */}
               <Route
                 path="/login"
                 element={
@@ -50,7 +50,6 @@ function App() {
               />
               <Route path="/signup" element={<Signup />} />
               <Route path="/settings" element={<Settings />} />
-              {/* <Route path="*" element={<Navigate to="/" replace />} /> */}
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>

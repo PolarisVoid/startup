@@ -1,6 +1,7 @@
 @media (min-width: 800px) {
     #desktop-nav {
         display: block;
+        height: 80px;
     }
     #mobile-nav {
         display: none;
@@ -10,11 +11,14 @@
 @media (max-width: 800px) {
     #mobile-nav {
         display: block;
+        height: 80px;
     }
     #desktop-nav {
         display: none;
     }
 }
+
+
 
 nav div {
     display: flex;

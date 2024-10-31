@@ -1,55 +1,67 @@
 import React from "react";
 import Link from "../Link";
+import "./DesktopNav.css";
 import { AuthState } from "../../javascript/authState";
 
 function DesktopNav({ userName, authState }) {
   return (
     <>
-      <nav className="navbar navbar-expand bg-red-gradient" id="desktop-nav">
-        <div className="container-fluid">
-          <div className="container-left">
-            <div className="justify-content-left">
+      <nav
+        id="desktop-nav"
+        className="navbar container-fluid bg-red-gradient h-100"
+      >
+        <div>
+          <div className="h-100 container-left ">
+            <div className="logo-container margin-right">
               <img
-                className="logo-icon nav-brand"
+                className="logo-icon margin-right"
                 alt="Logo"
                 src="/Pivot Logo/Pivot Icon Removed Background.png"
               />
               <Link to="/">
-                <h1 className="ps-2">Pivot</h1>
+                <h1 className="m-2">Pivot</h1>
               </Link>
             </div>
-            <ul className="ps-3 navbar-nav">
-              <li className="nav-item">
-                <Link to="/">Home</Link>
+            <ul className="nav-items-list">
+              <li className="nav-item h-100">
+                <Link to="/"><h5 className="m-2">Home</h5></Link>
               </li>
               <li className="nav-item">
-                <Link to="/calendar">Calendar</Link>
+                <Link to="/calendar"><h5 className="m-2">Calendar</h5></Link>
               </li>
               <li className="nav-item">
-                <Link to="/projects">Projects</Link>
+                <Link to="/projects"><h5 className="m-2">Projects</h5></Link>
               </li>
               <li className="nav-item">
-                <Link to="/goals">Goals</Link>
+                <Link to="/goals"><h5 className="m-2">Goals</h5></Link>
               </li>
             </ul>
           </div>
-          <div className="container-right">
-            <ul className="navbar-nav">
-              {authState === AuthState.Unauthenticated && (<><li className="nav-item">
-                <Link to="/login">Login</Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/signup">Sign Up</Link>
-              </li></>)}
-              {authState === AuthState.Authenticated && (<li className="nav-item">
-                <Link to="/settings">{userName}</Link>
-              </li>)}
+          <div className="h-100 container-right">
+            <ul className="nav-items-list">
+              {authState === AuthState.Unauthenticated && (
+                <>
+                  <li className="nav-item">
+                    <Link to="/login"><h5 className="m-2">Login</h5></Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link to="/signup"><h5 className="m-2">Sign Up</h5></Link>
+                  </li>
+                </>
+              )}
             </ul>
-            {authState === AuthState.Authenticated && (<img
-              className="logo-icon "
-              alt="User Profile"
-              src="/Pivot Logo/Pivot Icon Removed Background.png"
-            />)}
+            <div className="profile-image-container">
+              {authState === AuthState.Authenticated && (
+                  <Link to="/settings"><h5 className="m-2">{userName}</h5></Link>
+              )}
+              {authState === AuthState.Authenticated && (
+                <img
+                  className="logo-icon margin-left"
+                  alt="User Profile"
+                  src="/Pivot Logo/Pivot Icon Removed Background.png"
+                />
+              )}
+            </div>
           </div>
         </div>
       </nav>

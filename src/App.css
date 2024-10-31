@@ -42,7 +42,6 @@
 .viewport {
     height: calc(100vh - 80px);
     background-color: var(--white);
-    overflow-y: auto;
 }
 
 .viewport-100 {
