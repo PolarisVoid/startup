@@ -35,7 +35,7 @@ function DesktopNav({ userName, authState }) {
           </div>
           <div className="container-right">
             <ul className="navbar-nav">
-              {authState !== AuthState.Authenticated && (<><li className="nav-item">
+              {authState === AuthState.Unauthenticated && (<><li className="nav-item">
                 <Link to="/login">Login</Link>
               </li>
               <li className="nav-item">

@@ -55,7 +55,7 @@ function MobileNav({ userName, authState }) {
               icon="/icons/user-alt-1-svgrepo-com.svg"
               text={userName}
             />)}
-            {authState !== AuthState.Authenticated && (<IconGroup
+            {authState === AuthState.Unauthenticated && (<IconGroup
               to="/login"
               icon="/icons/user-alt-1-svgrepo-com.svg"
               text="Login"
