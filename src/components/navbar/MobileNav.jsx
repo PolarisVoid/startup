@@ -1,12 +1,12 @@
 import React from "react";
-import Link from "./Link";
-import { AuthState } from "../javascript/authState";
+import Link from "../Link";
+import { AuthState } from "../../javascript/authState";
 import "./MobileNav.css";
-import "../../Pivot Logo/Pivot Icon Removed Background.png";
-import "../../icons/house-floor-svgrepo-com.svg";
-import "../../icons/calendar-day-svgrepo-com.svg";
-import "../../icons/list-check-svgrepo-com.svg";
-import "../../icons/award-svgrepo-com.svg";
+import "../../../Pivot Logo/Pivot Icon Removed Background.png";
+import "../../../icons/house-floor-svgrepo-com.svg";
+import "../../../icons/calendar-day-svgrepo-com.svg";
+import "../../../icons/list-check-svgrepo-com.svg";
+import "../../../icons/award-svgrepo-com.svg";
 
 function IconGroup({ to, icon, text }) {
   return (

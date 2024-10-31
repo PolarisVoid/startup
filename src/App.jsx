@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useState } from "react";
 import { AuthState } from "./javascript/authState";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/navbar/Navbar";
 import "./App.css";
 import Home from "./pages/Home";
 import Calendar from "./pages/Calendar";

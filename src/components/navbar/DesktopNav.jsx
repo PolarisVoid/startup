@@ -1,6 +1,6 @@
 import React from "react";
-import Link from "./Link";
-import { AuthState } from "../javascript/authState";
+import Link from "../Link";
+import { AuthState } from "../../javascript/authState";
 
 function DesktopNav({ userName, authState }) {
   return (
