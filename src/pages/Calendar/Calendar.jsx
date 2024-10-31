@@ -1,6 +1,6 @@
 import "./Calendar.css";
-import CalendarBody from "./Body";
-import CalendarHeader from "./Header";
+import CalendarBody from "./CalendarBody";
+import CalendarHeader from "./CalendarHeader";
 
 function Calendar() {
   return (

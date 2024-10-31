@@ -1,4 +1,4 @@
-import "./Body.css";
+import "./CalendarBody.css";
 import { useState } from "react";
 
 function CalendarTime({ children }) {
