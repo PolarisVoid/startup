@@ -7,9 +7,9 @@
 .calendar-nav-header {
     height: 50%;
     width: 100%;
-    background-color: green;
+    background-color: var(--primary-1);
     display: flex;
-    justify-content: left;
+    justify-content: space-between;
 }
 
 .calendar-days-header {

@@ -73,7 +73,7 @@ body {
 }
 
 .bg-red-gradient {
-    background: linear-gradient(var(--primary-1), var(--secondary-1));
+    background: linear-gradient(var(--secondary-1), var(--primary-1));
 }
 
 .bg-white {
@@ -96,4 +96,12 @@ body {
     background-color: var(--primary-1);
     border-color: var(--primary-1);
     color: var(--accent-1);
+}
+
+.margin-left {
+    margin-left: 5px;
+}
+
+.margin-right {
+    margin-right: 5px;
 }
