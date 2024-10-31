@@ -76,6 +76,11 @@ body {
     background: linear-gradient(var(--secondary-1), var(--primary-1));
 }
 
+.bg-red-gradient-reverse {
+    background: linear-gradient(var(--primary-1), var(--secondary-1));
+}
+
+
 .bg-white {
     background-color: var(--white);
 }

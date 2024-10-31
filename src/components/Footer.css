@@ -1,5 +1,5 @@
 footer {
-    background: linear-gradient(var(--secondary-1), var(--primary-1));
+    background: linear-gradient(var(--primary-1), var(--secondary-1));
     display: flex;
     justify-content: center;
     align-items: center;
