@@ -1,7 +1,7 @@
 .calendar-header {
     height: 100px;
     padding-left: 100px;
-    background-color: var(--white);
+    background-color: var(--primary-1);
 }
 
 .calendar-nav-header {
@@ -29,6 +29,10 @@
     font-weight: bold;
     color: var(--accent-1);
     background-color: var(--primary-1);
+
+}
+
+.calendar-day-header:not(:first-child) {
     border-style: solid;
     border-width: 0px 0px 1px 1px;
     border-color: var(--black);
