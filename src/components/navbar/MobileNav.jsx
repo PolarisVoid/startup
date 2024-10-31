@@ -25,11 +25,11 @@ function MobileNav({ userName, authState }) {
   return (
     <>
       <nav
-        className="navbar navbar-expand bg-red-gradient fixed-bottom p-0"
+        className="navbar container-fluid bg-red-gradient fixed-bottom p-0 navbar-container-mobile"
         id="mobile-nav"
       >
-        <div className="container justify-content-center">
-          <ul className="navbar-nav">
+        <div className="container-basic justify-content-center">
+          <ul className="nav-items-list">
             <IconGroup
               to="/"
               icon="/icons/house-floor-svgrepo-com.svg"

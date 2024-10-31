@@ -14,17 +14,26 @@
     #mobile-nav {
         display: block;
     }
+    .navbar-container-mobile {
+        height: 80px;
+    }
     #desktop-nav {
         display: none;
     }
 }
 
+.nav-items-list {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
 
-
-nav div {
+.container-basic {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 100%;
 }
 
 .logo-icon  {
