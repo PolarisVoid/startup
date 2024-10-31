@@ -1,6 +1,8 @@
 @media (min-width: 800px) {
     #desktop-nav {
         display: block;
+    }
+    .navbar-container {
         height: 80px;
     }
     #mobile-nav {
@@ -11,7 +13,6 @@
 @media (max-width: 800px) {
     #mobile-nav {
         display: block;
-        height: 80px;
     }
     #desktop-nav {
         display: none;

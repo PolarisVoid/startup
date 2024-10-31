@@ -10,8 +10,8 @@ function DesktopNav({ userName, authState }) {
         id="desktop-nav"
         className="navbar container-fluid bg-red-gradient h-100"
       >
-        <div>
-          <div className="h-100 container-left ">
+        <div className="container-basic">
+          <div className="h-100 container-basic">
             <div className="logo-container margin-right">
               <img
                 className="logo-icon margin-right"
@@ -37,7 +37,7 @@ function DesktopNav({ userName, authState }) {
               </li>
             </ul>
           </div>
-          <div className="h-100 container-right">
+          <div className="h-100 container-basic">
             <ul className="nav-items-list">
               {authState === AuthState.Unauthenticated && (
                 <>
@@ -50,7 +50,7 @@ function DesktopNav({ userName, authState }) {
                 </>
               )}
             </ul>
-            <div className="profile-image-container">
+            <div className="profile-image-container container-basic">
               {authState === AuthState.Authenticated && (
                   <Link to="/settings"><h5 className="m-2">{userName}</h5></Link>
               )}
