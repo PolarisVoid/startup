@@ -45,11 +45,11 @@ function MobileNav({ userName, authState }) {
               icon="/icons/list-check-svgrepo-com.svg"
               text="Projects"
             />
-            <IconGroup
+            {/* <IconGroup
               to="/goals"
               icon="/icons/award-svgrepo-com.svg"
               text="Goals"
-            />
+            /> */}
             {authState === AuthState.Authenticated && (<IconGroup
               to="/settings"
               icon="/icons/user-alt-1-svgrepo-com.svg"

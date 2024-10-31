@@ -32,9 +32,9 @@ function DesktopNav({ userName, authState }) {
               <li className="nav-item">
                 <Link to="/projects"><h5 className="m-2">Projects</h5></Link>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link to="/goals"><h5 className="m-2">Goals</h5></Link>
-              </li>
+              </li> */}
             </ul>
           </div>
           <div className="h-100 container-basic">

@@ -35,7 +35,7 @@ function App() {
               <Route path="/" element={<Home />} exact />
               <Route path="/calendar" element={<Calendar />} />
               <Route path="/projects" element={<Projects />} />
-              {/* <Route path="/goals" element={<Goals />} /> */}
+              <Route path="/goals" element={<Goals />} />
               <Route
                 path="/login"
                 element={
