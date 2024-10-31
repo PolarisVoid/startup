@@ -2,6 +2,7 @@
     background-image: url("../assets/images/landing-page.avif");
     background-attachment: fixed;
     background-size: cover;
+    background-position: center;
     display: grid;
     align-items: center;
     justify-content: center;
@@ -11,6 +12,7 @@
     background-image: url("../assets/images/empty-jar.jpg");
     background-attachment: fixed;
     background-size: cover;
+    background-position: center;
     display: grid;
     align-items: center;
     justify-content: center;
@@ -20,6 +22,7 @@
     background-image: url("../assets/images/rocks.webp");
     background-attachment: fixed;
     background-size: cover;
+    background-position: center;
     display: grid;
     align-items: center;
     justify-content: center;
@@ -29,6 +32,7 @@
     background-image: url("../assets/images/pebbles.webp");
     background-attachment: fixed;
     background-size: cover;
+    background-position: center;
     display: grid;
     align-items: center;
     justify-content: center;
@@ -38,6 +42,7 @@
     background-image: url("../assets/images/sand.webp");
     background-attachment: fixed;
     background-size: cover;
+    background-position: center;
     display: grid;
     align-items: center;
     justify-content: center;
@@ -47,6 +52,7 @@
     background-image: url("../assets/images/filled-jar.webp");
     background-attachment: fixed;
     background-size: cover;
+    background-position: center;
     display: grid;
     align-items: center;
     justify-content: center;
@@ -87,4 +93,10 @@
   .text-white {
     color: white;
     border-color: white;
+  }
+
+  .scroll {
+    overflow-y: scroll;
+    height: 100%;
+    width: 100%;
   }

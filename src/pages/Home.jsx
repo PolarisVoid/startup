@@ -31,7 +31,7 @@ function SectionPicture({ title, analogy, description, img, children }) {
 
 function Home() {
   return (
-    <>
+    <div className="scroll">
       <section className="viewport-100 landing-photo d-flex align-items-center justify-content-center text-center">
         <div className="container glassy-background">
           <div className="p-5">
@@ -185,7 +185,7 @@ function Home() {
         </div>
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
 

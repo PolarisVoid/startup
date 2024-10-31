@@ -5,7 +5,7 @@ import Navbar from "./components/navbar/Navbar";
 import "./App.css";
 import Home from "./pages/Home";
 import Calendar from "./pages/Calendar/Calendar";
-import Projects from "./pages/Projects";
+import Projects from "./pages/Projects/Projects";
 import Goals from "./pages/Goals";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
