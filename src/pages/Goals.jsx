@@ -3,73 +3,73 @@ function Goals() {
     <>
       <h1>Goals</h1>
       <p>Add Goal</p>
-      <form class="needs-validation" novalidate>
-        <div class="mb-3">
-          <label for="goal_name" class="form-label">
+      <form className="needs-validation" novalidate>
+        <div className="mb-3">
+          <label for="goal_name" className="form-label">
             Goal Name
           </label>
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="goal_name"
             name="goal_name"
             required
           />
-          <div class="invalid-feedback">Please provide a goal name.</div>
+          <div className="invalid-feedback">Please provide a goal name.</div>
         </div>
-        <div class="mb-3">
-          <label for="goal_description" class="form-label">
+        <div className="mb-3">
+          <label for="goal_description" className="form-label">
             Goal Description
           </label>
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="goal_description"
             name="goal_description"
             required
           />
-          <div class="invalid-feedback">Please provide a goal description.</div>
+          <div className="invalid-feedback">Please provide a goal description.</div>
         </div>
-        <div class="mb-3">
-          <label for="goal_category" class="form-label">
+        <div className="mb-3">
+          <label for="goal_category" className="form-label">
             Goal Category
           </label>
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="goal_category"
             name="goal_category"
             required
           />
-          <div class="invalid-feedback">Please provide a goal category.</div>
+          <div className="invalid-feedback">Please provide a goal category.</div>
         </div>
-        <div class="mb-3">
-          <label for="goal_due_date" class="form-label">
+        <div className="mb-3">
+          <label for="goal_due_date" className="form-label">
             Goal Due Date
           </label>
           <input
             type="date"
-            class="form-control"
+            className="form-control"
             id="goal_due_date"
             name="goal_due_date"
             required
           />
-          <div class="invalid-feedback">Please provide a goal due date.</div>
+          <div className="invalid-feedback">Please provide a goal due date.</div>
         </div>
-        <div class="mb-3">
-          <label for="goal_priority" class="form-label">
+        <div className="mb-3">
+          <label for="goal_priority" className="form-label">
             Goal Priority
           </label>
           <input
             type="number"
-            class="form-control"
+            className="form-control"
             id="goal_priority"
             name="goal_priority"
             required
           />
-          <div class="invalid-feedback">Please provide a goal priority.</div>
+          <div className="invalid-feedback">Please provide a goal priority.</div>
         </div>
-        <button type="submit" class="btn btn-primary">
+        <button type="submit" className="btn btn-primary">
           Add Goal
         </button>
       </form>

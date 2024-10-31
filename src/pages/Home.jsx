@@ -8,17 +8,17 @@ function SectionPicture({ title, analogy, description, img, children }) {
     styling += " " + img;
   }
   return (
-    <section class={styling}>
-      <div class="container glassy-background">
-        <div class="p-3">
-          <div class="border-bottom border-1 border-dark">
+    <section className={styling}>
+      <div className="container glassy-background">
+        <div className="p-3">
+          <div className="border-bottom border-1 border-dark">
             <h1>{title}</h1>
           </div>
-          <div class="d-flex justify-content-between">
-            <div class="w-40 text-center">
+          <div className="d-flex justify-content-between">
+            <div className="w-40 text-center">
               <p>{analogy}</p>
             </div>
-            <div class="w-40 text-center">
+            <div className="w-40 text-center">
               <p>{description}</p>
               {children}
             </div>
@@ -32,14 +32,14 @@ function SectionPicture({ title, analogy, description, img, children }) {
 function Home() {
   return (
     <>
-      <section class="viewport-100 landing-photo d-flex align-items-center justify-content-center text-center">
-        <div class="container glassy-background">
-          <div class="p-5">
-            <h1 class="display-1">Welcome to Pivot</h1>
-            <p class="lead">Take control of your daily life</p>
+      <section className="viewport-100 landing-photo d-flex align-items-center justify-content-center text-center">
+        <div className="container glassy-background">
+          <div className="p-5">
+            <h1 className="display-1">Welcome to Pivot</h1>
+            <p className="lead">Take control of your daily life</p>
             <button
               type="button"
-              class="btn btn-primary-1"
+              className="btn btn-primary-1"
               data-bs-toggle="modal"
               data-bs-target="#exampleModal"
             >
@@ -48,14 +48,14 @@ function Home() {
           </div>
         </div>
       </section>
-      <section class="spacer"></section>
+      <section className="spacer"></section>
       <SectionPicture
         title="Empty Jar"
         analogy="Imagine your life as a jar"
         description="The jar represents your life, and the rocks, pebbles, and sand represent the things that fill it up."
         img="empty-jar"
       />
-      <section class="spacer"></section>
+      <section className="spacer"></section>
       <SectionPicture
         title="Rocks"
         analogy="The rocks represent the most important scheduled items in your
@@ -67,7 +67,7 @@ function Home() {
                 that they get the attention they deserve."
         img="rocks text-white"
       />
-      <section class="spacer"></section>
+      <section className="spacer"></section>
       <SectionPicture
         title="Pebbles"
         analogy="The pebbles represent the important but less critical tasks in
@@ -78,7 +78,7 @@ function Home() {
                 priorities change."
         img="pebbles"
       />
-      <section class="spacer"></section>
+      <section className="spacer"></section>
       <SectionPicture
         title="Sand"
         analogy="The sand represents all the little tasks that need to get
@@ -89,7 +89,7 @@ function Home() {
                 scheduling around the important things in life."
         img="sand"
       />
-      <section class="spacer"></section>
+      <section className="spacer"></section>
       <SectionPicture
         title="Filled Jar"
         analogy="The filled jar represents a balanced and fulfilling life where
@@ -100,7 +100,7 @@ function Home() {
       >
         <button
           type="button"
-          class="btn btn-primary-1"
+          className="btn btn-primary-1"
           data-bs-toggle="modal"
           data-bs-target="#exampleModal"
         >
@@ -108,76 +108,76 @@ function Home() {
         </button>
       </SectionPicture>
       <div
-        class="modal fade"
+        className="modal fade"
         id="exampleModal"
         tabindex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
       >
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h5 className="modal-title" id="exampleModalLabel">
                 Sign Up
               </h5>
               <button
                 type="button"
-                class="btn-close"
+                className="btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
               ></button>
             </div>
-            <div class="modal-body">
+            <div className="modal-body">
               <form></form>
-              <div class="mb-3">
-                <label for="username" class="form-label">
+              <div className="mb-3">
+                <label for="username" className="form-label">
                   Username
                 </label>
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   id="username"
                   required
                 />
               </div>
-              <div class="mb-3">
-                <label for="email" class="form-label">
+              <div className="mb-3">
+                <label for="email" className="form-label">
                   Email address
                 </label>
-                <input type="email" class="form-control" id="email" required />
+                <input type="email" className="form-control" id="email" required />
               </div>
-              <div class="mb-3">
-                <label for="password" class="form-label">
+              <div className="mb-3">
+                <label for="password" className="form-label">
                   Password
                 </label>
                 <input
                   type="password"
-                  class="form-control"
+                  className="form-control"
                   id="password"
                   required
                 />
               </div>
-              <div class="mb-3">
-                <label for="confirmPassword" class="form-label">
+              <div className="mb-3">
+                <label for="confirmPassword" className="form-label">
                   Confirm Password
                 </label>
                 <input
                   type="password"
-                  class="form-control"
+                  className="form-control"
                   id="confirmPassword"
                   required
                 />
               </div>
             </div>
-            <div class="modal-footer">
+            <div className="modal-footer">
               <button
                 type="button"
-                class="btn btn-secondary"
+                className="btn btn-secondary"
                 data-bs-dismiss="modal"
               >
                 Cancel
               </button>
-              <button type="button" class="btn btn-primary-1">
+              <button type="button" className="btn btn-primary-1">
                 Sign Up
               </button>
             </div>

@@ -3,13 +3,12 @@ import "./Navbar.css";
 import MobileNav from "./MobileNav";
 import DesktopNav from "./DesktopNav";
 
-
-function Navbar() {
+function Navbar({ userName, authState }) {
   return (
     <>
       <header className="navbar-container">
-        <DesktopNav />
-        <MobileNav />
+        <DesktopNav userName={userName} authState={authState} />
+        <MobileNav userName={userName} authState={authState} />
       </header>
     </>
   );

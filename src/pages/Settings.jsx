@@ -3,76 +3,76 @@ function settings() {
     <>
       <h1>Settings</h1>
       <form>
-        <div class="mb-3">
-          <label for="profile_image" class="form-label">
+        <div className="mb-3">
+          <label for="profile_image" className="form-label">
             Profile Image
           </label>
           <input
             type="file"
-            class="form-control"
+            className="form-control"
             id="profile_image"
             name="profile_image"
           />
         </div>
-        <div class="mb-3">
-          <label for="username" class="form-label">
+        <div className="mb-3">
+          <label for="username" className="form-label">
             Username
           </label>
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="username"
             name="username"
             required
           />
         </div>
-        <div class="mb-3">
-          <label for="password" class="form-label">
+        <div className="mb-3">
+          <label for="password" className="form-label">
             Password
           </label>
           <input
             type="password"
-            class="form-control"
+            className="form-control"
             id="password"
             name="password"
             required
           />
         </div>
-        <div class="mb-3">
-          <label for="email" class="form-label">
+        <div className="mb-3">
+          <label for="email" className="form-label">
             Email
           </label>
           <input
             type="email"
-            class="form-control"
+            className="form-control"
             id="email"
             name="email"
             required
           />
         </div>
-        <div class="mb-3 form-check">
+        <div className="mb-3 form-check">
           <input
             type="checkbox"
-            class="form-check-input"
+            className="form-check-input"
             id="notifications"
             name="notifications"
           />
-          <label class="form-check-label" for="notifications">
+          <label className="form-check-label" for="notifications">
             Notifications
           </label>
         </div>
-        <div class="mb-3 form-check">
+        <div className="mb-3 form-check">
           <input
             type="checkbox"
-            class="form-check-input"
+            className="form-check-input"
             id="dark-mode"
             name="dark-mode"
           />
-          <label class="form-check-label" for="dark-mode">
+          <label className="form-check-label" for="dark-mode">
             Dark Mode
           </label>
         </div>
-        <button type="submit" class="btn btn-primary">
+        <button type="submit" className="btn btn-primary">
           Save
         </button>
       </form>

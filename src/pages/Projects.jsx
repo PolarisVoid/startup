@@ -2,75 +2,75 @@ import "./Projects.css";
 
 function Projects() {
   return (
-    <div class="project-container">
-      <div id="larger-window-menu" class="project-menu">
-        <div class="bg-red-gradient">
+    <div className="project-container">
+      <div id="larger-window-menu" className="project-menu">
+        <div className="bg-red-gradient">
           <div id="accordion">
-            <div class="card-header">
+            <div className="card-header">
               <a
-                class="btn btn-sm btn-block btn-outline-none text-start border-bottom rounded-0 w-100 golden"
+                className="btn btn-sm btn-block btn-outline-none text-start border-bottom rounded-0 w-100 golden"
                 data-bs-toggle="collapse"
                 href="#myProjects"
               >
                 My Projects
               </a>
             </div>
-            <div id="myProjects" class="collapse">
-              <div class="card-body">
-                <button class="btn btn-sm golden">Unassigned Tasks</button>
-                <button class="btn btn-sm golden">[DataBase Pull]</button>
-                <button class="btn btn-sm golden">Add Project</button>
+            <div id="myProjects" className="collapse">
+              <div className="card-body">
+                <button className="btn btn-sm golden">Unassigned Tasks</button>
+                <button className="btn btn-sm golden">[DataBase Pull]</button>
+                <button className="btn btn-sm golden">Add Project</button>
               </div>
             </div>
-            <div class="card-header">
+            <div className="card-header">
               <a
-                class="btn btn-sm btn-block btn-outline-none text-start border-bottom rounded-0 w-100 golden"
+                className="btn btn-sm btn-block btn-outline-none text-start border-bottom rounded-0 w-100 golden"
                 data-bs-toggle="collapse"
                 href="#sharedProjects"
               >
                 Shared Projects
               </a>
             </div>
-            <div id="sharedProjects" class="collapse">
-              <div class="card-body">
-                <button class="btn btn-sm golden">[DataBase Pull]</button>
+            <div id="sharedProjects" className="collapse">
+              <div className="card-body">
+                <button className="btn btn-sm golden">[DataBase Pull]</button>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="project-window">
-        <div class="nav">
+      <div className="project-window">
+        <div className="nav">
           <a
             id="smaller-window-menu"
-            class="btn btn-primary-1"
+            className="btn btn-primary-1"
             data-bs-toggle="offcanvas"
             href="#project-menu"
             role="button"
             aria-controls="project-menu"
           >
-            <img class="icon" src="/icons/filter-svgrepo-com.svg" />
+            <img className="icon" src="/icons/filter-svgrepo-com.svg" />
           </a>
-          <div class="offcanvas offcanvas-top" id="project-menu">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="project-menu-label">
+          <div className="offcanvas offcanvas-top" id="project-menu">
+            <div className="offcanvas-header">
+              <h5 className="offcanvas-title" id="project-menu-label">
                 Project List
               </h5>
             </div>
-            <div class="offcanvas-body">
+            <div className="offcanvas-body">
               <div id="accordion">
-                <div class="card-header">
+                <div className="card-header">
                   <a
-                    class="btn btn-sm btn-block"
+                    className="btn btn-sm btn-block"
                     data-bs-toggle="collapse"
                     href="#sharedProjects"
                   >
                     Shared Projects
                   </a>
                 </div>
-                <div class="card-header">
+                <div className="card-header">
                   <a
-                    class="btn btn-sm btn-block"
+                    className="btn btn-sm btn-block"
                     data-bs-toggle="collapse"
                     href="#sharedProjects"
                   >
@@ -81,8 +81,8 @@ function Projects() {
             </div>
           </div>
         </div>
-        <div class="task-table">
-          <div class="col ps-3">
+        <div className="task-table">
+          <div className="col ps-3">
             <h1>Project Name</h1>
             <p>Add Task</p>
             <ul>
@@ -92,7 +92,7 @@ function Projects() {
             </ul>
             <h2>Section Heading</h2>
             <div>
-              <table class="table table-hover table-bordered">
+              <table className="table table-hover table-bordered">
                 <thead>
                   <tr>
                     <th>Task Name</th>
@@ -107,44 +107,44 @@ function Projects() {
                 <tbody>
                   <tr>
                     <td>
-                      <button class="btn p-0 text-dark btn-outline-none">
+                      <button className="btn p-0 text-dark btn-outline-none">
                         Example Task 1
                       </button>
                     </td>
                     <td>
-                      <button class="btn p-0 text-dark btn-outline-none">
+                      <button className="btn p-0 text-dark btn-outline-none">
                         [Username]
                       </button>
                     </td>
                     <td>
-                      <button class="btn p-0 text-dark btn-outline-none">
+                      <button className="btn p-0 text-dark btn-outline-none">
                         Tuesday
                       </button>
                     </td>
                     <td>
-                      <button class="btn p-0 text-dark btn-outline-none">
+                      <button className="btn p-0 text-dark btn-outline-none">
                         High
                       </button>
                     </td>
                     <td>
-                      <button class="btn p-0 text-dark btn-outline-none">
+                      <button className="btn p-0 text-dark btn-outline-none">
                         7:00 pm
                       </button>
                     </td>
                     <td>
-                      <button class="btn p-0 text-dark btn-outline-none">
+                      <button className="btn p-0 text-dark btn-outline-none">
                         8:00 pm
                       </button>
                     </td>
                     <td>
-                      <button class="btn p-0 text-dark btn-outline-none">
+                      <button className="btn p-0 text-dark btn-outline-none">
                         Monday
                       </button>
                     </td>
                   </tr>
                   <tr>
                     <td>
-                      <button class="btn p-0 text-muted btn-outline-none">
+                      <button className="btn p-0 text-muted btn-outline-none">
                         Add Task
                       </button>
                     </td>
@@ -161,7 +161,7 @@ function Projects() {
             <h2>Section Heading</h2>
             <p>Websocket For Shared Projects</p>
             <div>
-              <table class="table table-hover">
+              <table className="table table-hover">
                 <thead>
                   <tr>
                     <th>Task Name</th>
@@ -176,44 +176,44 @@ function Projects() {
                 <tbody>
                   <tr>
                     <td>
-                      <button class="btn p-0 text-dark btn-outline-none">
+                      <button className="btn p-0 text-dark btn-outline-none">
                         Example Task 1
                       </button>
                     </td>
                     <td>
-                      <button class="btn p-0 text-dark btn-outline-none">
+                      <button className="btn p-0 text-dark btn-outline-none">
                         [Username]
                       </button>
                     </td>
                     <td>
-                      <button class="btn p-0 text-dark btn-outline-none">
+                      <button className="btn p-0 text-dark btn-outline-none">
                         Tuesday
                       </button>
                     </td>
                     <td>
-                      <button class="btn p-0 text-dark btn-outline-none">
+                      <button className="btn p-0 text-dark btn-outline-none">
                         High
                       </button>
                     </td>
                     <td>
-                      <button class="btn p-0 text-dark btn-outline-none">
+                      <button className="btn p-0 text-dark btn-outline-none">
                         7:00 pm
                       </button>
                     </td>
                     <td>
-                      <button class="btn p-0 text-dark btn-outline-none">
+                      <button className="btn p-0 text-dark btn-outline-none">
                         8:00 pm
                       </button>
                     </td>
                     <td>
-                      <button class="btn p-0 text-dark btn-outline-none">
+                      <button className="btn p-0 text-dark btn-outline-none">
                         Monday
                       </button>
                     </td>
                   </tr>
                   <tr>
                     <td>
-                      <button class="btn p-0 text-muted btn-outline-none">
+                      <button className="btn p-0 text-muted btn-outline-none">
                         Add Task
                       </button>
                     </td>

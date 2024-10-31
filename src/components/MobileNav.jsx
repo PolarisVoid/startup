@@ -1,12 +1,27 @@
 import React from "react";
 import Link from "./Link";
+import { AuthState } from "../javascript/authState";
+import "./MobileNav.css";
 import "../../Pivot Logo/Pivot Icon Removed Background.png";
 import "../../icons/house-floor-svgrepo-com.svg";
 import "../../icons/calendar-day-svgrepo-com.svg";
 import "../../icons/list-check-svgrepo-com.svg";
 import "../../icons/award-svgrepo-com.svg";
 
-function MobileNav() {
+function IconGroup({ to, icon, text }) {
+  return (
+    <li className="nav-item p-1 m-0">
+      <Link to={to}>
+        <div className="nav-icon-container">
+          <img className="nav-icon" src={icon} />
+          <p className="nav-icon-text">{text}</p>
+        </div>
+      </Link>
+    </li>
+  );
+}
+
+function MobileNav({ userName, authState }) {
   return (
     <>
       <nav
@@ -15,61 +30,36 @@ function MobileNav() {
       >
         <div className="container justify-content-center">
           <ul className="navbar-nav">
-            <li className="nav-item p-1">
-              <Link to="/">
-                <div className="nav-icon-container">
-                  <img
-                    className="nav-icon"
-                    src="/icons/house-floor-svgrepo-com.svg"
-                  />
-                  <p className="nav-icon-text">Home</p>
-                </div>
-              </Link>
-            </li>
-            <li className="nav-item p-1">
-              <Link to="/calendar">
-                <div className="nav-icon-container">
-                  <img
-                    className="nav-icon"
-                    src="/icons/calendar-day-svgrepo-com.svg"
-                  />
-                  <p className="nav-icon-text">Calendar</p>
-                </div>
-              </Link>
-            </li>
-            <li className="nav-item p-1">
-              <Link to="/projects">
-                <div className="nav-icon-container">
-                  <img
-                    className="nav-icon"
-                    src="/icons/list-check-svgrepo-com.svg"
-                  />
-                  <p className="nav-icon-text">Projects</p>
-                </div>
-              </Link>
-            </li>
-            <li className="nav-item p-1">
-              <Link to="/goals">
-                <div className="nav-icon-container">
-                  <img
-                    className="nav-icon"
-                    src="/icons/award-svgrepo-com.svg"
-                  />
-                  <p className="nav-icon-text">Goals</p>
-                </div>
-              </Link>
-            </li>
-            <li className="nav-item p-1">
-              <Link to="/login">
-                <div className="nav-icon-container">
-                  <img
-                    className="nav-icon"
-                    src="/icons/user-alt-1-svgrepo-com.svg"
-                  />
-                  <p className="nav-icon-text">Login</p>
-                </div>
-              </Link>
-            </li>
+            <IconGroup
+              to="/"
+              icon="/icons/house-floor-svgrepo-com.svg"
+              text="Home"
+            />
+            <IconGroup
+              to="/calendar"
+              icon="/icons/calendar-day-svgrepo-com.svg"
+              text="Calendar"
+            />
+            <IconGroup
+              to="/projects"
+              icon="/icons/list-check-svgrepo-com.svg"
+              text="Projects"
+            />
+            <IconGroup
+              to="/goals"
+              icon="/icons/award-svgrepo-com.svg"
+              text="Goals"
+            />
+            {authState === AuthState.Authenticated && (<IconGroup
+              to="/settings"
+              icon="/icons/user-alt-1-svgrepo-com.svg"
+              text={userName}
+            />)}
+            {authState !== AuthState.Authenticated && (<IconGroup
+              to="/login"
+              icon="/icons/user-alt-1-svgrepo-com.svg"
+              text="Login"
+            />)}
           </ul>
         </div>
       </nav>

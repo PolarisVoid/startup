@@ -24,11 +24,12 @@
     --night: #070908;
 
     --primary-1: var(--dark-scarlet);
-    --primary-1: var(--dark-scarlet);
     --primary-2: var(--ultra-voilet);
     --accent-1: var(--goldenrod);
     --secondary-1: var(--rosewood);
     --secondary-2: var(--african-violet);
+    --triary-1: var(--auburn);
+    --triary-2: var(--royal-purple);
     --white: var(--ivory);
     --black: var(--night);
 }
@@ -39,17 +40,17 @@
 }
 
 .viewport {
-    height: calc(100vh - 60px);
+    height: calc(100vh - 80px);
     background-color: var(--white);
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .viewport-100 {
-    height: calc(100vh - 60px);
+    height: calc(100vh - 80px);
 }
 
 .viewport-50 {
-    height: calc(100vh - 60px);
+    height: calc(100vh - 80px);
 }
 
 body {
@@ -90,4 +91,10 @@ body {
     background-color: var(--secondary-1);
     border-color: var(--secondary-1);
     color: var(--white);
+}
+
+.btn-primary-1:disabled {
+    background-color: var(--primary-1);
+    border-color: var(--primary-1);
+    color: var(--accent-1);
 }

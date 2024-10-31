@@ -1,7 +1,8 @@
 import React from "react";
 import Link from "./Link";
+import { AuthState } from "../javascript/authState";
 
-function DesktopNav() {
+function DesktopNav({ userName, authState }) {
   return (
     <>
       <nav className="navbar navbar-expand bg-red-gradient" id="desktop-nav">
@@ -34,21 +35,21 @@ function DesktopNav() {
           </div>
           <div className="container-right">
             <ul className="navbar-nav">
-              <li className="nav-item">
+              {authState !== AuthState.Authenticated && (<><li className="nav-item">
                 <Link to="/login">Login</Link>
               </li>
               <li className="nav-item">
                 <Link to="/signup">Sign Up</Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/settings">Username</Link>
-              </li>
+              </li></>)}
+              {authState === AuthState.Authenticated && (<li className="nav-item">
+                <Link to="/settings">{userName}</Link>
+              </li>)}
             </ul>
-            <img
+            {authState === AuthState.Authenticated && (<img
               className="logo-icon "
               alt="User Profile"
               src="/Pivot Logo/Pivot Icon Removed Background.png"
-            />
+            />)}
           </div>
         </div>
       </nav>
