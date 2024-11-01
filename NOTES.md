@@ -52,3 +52,16 @@ Is a web certificate is necessary to use HTTPS? Yes a SSL certificate is require
 Can a DNS A record can point to an IP address or another A record. Only to an IP Address, not another A record
 
 Port 443, 80, 22 is reserved for which protocol? HTTPS, HTTP, SSH
+
+## Google Tag
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EMLBQ24CYL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EMLBQ24CYL');
+</script>
+
+## Google Adsense

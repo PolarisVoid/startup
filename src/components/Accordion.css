@@ -1,0 +1,39 @@
+.accordion-header {
+    color: var(--accent-1);
+    border-bottom: 1px solid var(--accent-1);
+    width: 100%;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.accordion-header a {
+    color: var(--accent-1);
+    text-decoration: none;
+}
+
+.accordion-header>a:hover {
+    color:var(--white);
+}
+
+.accordionHeading {
+    font-size: 2rem;
+}
+
+.accordionHeader-header {
+    color: var(--primary-1);
+    border-bottom: 1px solid var(--primary-1);
+    width: 100%;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.accordionHeader-header a {
+    color: var(--primary-1);
+    text-decoration: none;
+}
+
+.accordionHeader-header>a:hover {
+    color:var(--accent-1);
+}
