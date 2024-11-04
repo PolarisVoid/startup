@@ -15,7 +15,6 @@ Are you a student or returned missionary overwhelmed by a busy schedule? **Pivot
 ### Key Features
 
 - [ ] Time Blocking: Carve out time for events throughout the day.
-- [ ] Goal Tracking: Set and track personal goals.
 - [ ] Automatic Task Scheduling: Let the app find time for your Tasks.
 - [ ] Easy Editing: Seamlessly edit your calendar and where things go.
 - [ ] Schedule Sharing: Share your schedule with others.
@@ -24,6 +23,7 @@ Are you a student or returned missionary overwhelmed by a busy schedule? **Pivot
 
 ### Future Features
 
+- [ ] Goal Tracking: Set and track personal goals.
 - [ ] Offline Mode
 - [ ] Appointment Scheduling
 - [ ] Contact Importing (Addresses and Contact)
@@ -44,7 +44,7 @@ Are you a student or returned missionary overwhelmed by a busy schedule? **Pivot
 - [ ] Event Invitations
 - [ ] Task Dash Board (Review of their tasks, time, etc.)
 - [ ] Class Features (Homework, Exams, etc.)
-      -->
+-->
 
 ### Technologies
 
