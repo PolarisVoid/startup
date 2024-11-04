@@ -1,5 +1,5 @@
 .calendar-body {
-    height: calc(100% - 100px);
+    height: calc(100% - 75px);
     width: 100%;
     display: flex;
 }
@@ -22,7 +22,7 @@
 
 .calendar {
     height: 100%;
-    width: calc(100% - 100px);
+    width: calc(100% - 75px);
     background-color: var(--white);
     display: flex;
     flex-direction: row;

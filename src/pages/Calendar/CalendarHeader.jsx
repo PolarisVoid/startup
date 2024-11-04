@@ -1,38 +1,44 @@
 import "./CalendarHeader.css";
 
+function NavigationHeader() {
+  return (
+    <div className="calendar-nav-header">
+      <div className="d-flex justify-content-between align-items-center w-50">
+        <button className="btn btn-primary btn-primary-1" id="prev-week">
+          <img className="icon" src="src/assets/icons/arrow-circle-left.svg" />
+        </button>
+        <h2 id="current-day" className="golden">
+          7th September
+        </h2>
+        <button className="btn btn-primary btn-primary-1" id="next-week">
+          <img className="icon" src="src/assets/icons/arrow-circle-right.svg" />
+        </button>
+      </div>
+      <div className="btn-group margin-right" role="group">
+        <button type="button" className="btn btn-primary btn-primary-1">
+          <img className="icon" src="src/assets/icons/square-list.svg" />
+        </button>
+        <button type="button" className="btn btn-primary btn-primary-1">
+          <img className="icon" src="src/assets/icons/plus.svg" />
+        </button>
+        <button type="button" className="btn btn-primary btn-primary-1">
+          <img className="icon" src="src/assets/icons/filter.svg" />
+        </button>
+        <button type="button" className="btn btn-primary btn-primary-1">
+          <img
+            className="icon"
+            src="src/assets/icons/arrow-up-from-bracket.svg"
+          />
+        </button>
+      </div>
+    </div>
+  );
+}
+
 function CalendarHeader() {
   return (
     <div className="calendar-header">
-      <div className="calendar-nav-header">
-        <div class="d-flex justify-content-between align-items-center w-50">
-          <button class="btn btn-primary btn-primary-1" id="prev-week">
-            ←
-          </button>
-          <h2 id="current-day" class="golden">
-            7th September
-          </h2>
-          <button class="btn btn-primary btn-primary-1" id="next-week">
-            →
-          </button>
-        </div>
-        <div class="btn-group margin-right" role="group">
-          <button type="button" class="btn btn-primary btn-primary-1">
-            <img class="icon" src="src/assets/icons/square-list.svg" />
-          </button>
-          <button type="button" class="btn btn-primary btn-primary-1">
-            <img class="icon" src="src/assets/icons/plus.svg" />
-          </button>
-          <button type="button" class="btn btn-primary btn-primary-1">
-            <img class="icon" src="src/assets/icons/filter.svg" />
-          </button>
-          <button type="button" class="btn btn-primary btn-primary-1">
-            <img
-              class="icon"
-              src="src/assets/icons/arrow-up-from-bracket.svg"
-            />
-          </button>
-        </div>
-      </div>
+      <NavigationHeader />
       <div className="calendar-days-header">
         <div className="calendar-day-header">Sun</div>
         <div className="calendar-day-header">Mon</div>
