@@ -16,7 +16,7 @@ function DesktopNav({ userName, authState }) {
               <img
                 className="logo-icon margin-right"
                 alt="Logo"
-                src="/Pivot Logo/Pivot Icon Removed Background.png"
+                src="/src/assets/logos/pivot_logo_transparent.svg"
               />
               <Link to="/">
                 <h1 className="m-2">Pivot</h1>
@@ -58,7 +58,7 @@ function DesktopNav({ userName, authState }) {
                 <img
                   className="logo-icon margin-left"
                   alt="User Profile"
-                  src="/Pivot Logo/Pivot Icon Removed Background.png"
+                  src="/src/assets/icons/user-alt-1.svg"
                 />
               )}
             </div>

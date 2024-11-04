@@ -2,11 +2,6 @@ import React from "react";
 import Link from "../Link";
 import { AuthState } from "../../javascript/authState";
 import "./MobileNav.css";
-import "../../../Pivot Logo/Pivot Icon Removed Background.png";
-import "../../../icons/house-floor-svgrepo-com.svg";
-import "../../../icons/calendar-day-svgrepo-com.svg";
-import "../../../icons/list-check-svgrepo-com.svg";
-import "../../../icons/award-svgrepo-com.svg";
 
 function IconGroup({ to, icon, text }) {
   return (
@@ -32,32 +27,32 @@ function MobileNav({ userName, authState }) {
           <ul className="nav-items-list">
             <IconGroup
               to="/"
-              icon="/icons/house-floor-svgrepo-com.svg"
+              icon="/src/assets/icons/house-floor.svg"
               text="Home"
             />
             <IconGroup
               to="/calendar"
-              icon="/icons/calendar-day-svgrepo-com.svg"
+              icon="/src/assets/icons/calendar-day.svg"
               text="Calendar"
             />
             <IconGroup
               to="/projects"
-              icon="/icons/list-check-svgrepo-com.svg"
+              icon="/src/assets/icons/list-check.svg"
               text="Projects"
             />
             {/* <IconGroup
               to="/goals"
-              icon="/icons/award-svgrepo-com.svg"
+              icon="/icons/award.svg"
               text="Goals"
             /> */}
             {authState === AuthState.Authenticated && (<IconGroup
               to="/settings"
-              icon="/icons/user-alt-1-svgrepo-com.svg"
+              icon="/src/assets/icons/user-alt-1.svg"
               text={userName}
             />)}
             {authState === AuthState.Unauthenticated && (<IconGroup
               to="/login"
-              icon="/icons/user-alt-1-svgrepo-com.svg"
+              icon="/src/assets/icons/user-alt-1.svg"
               text="Login"
             />)}
           </ul>

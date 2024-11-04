@@ -17,18 +17,18 @@ function CalendarHeader() {
         </div>
         <div class="btn-group margin-right" role="group">
           <button type="button" class="btn btn-primary btn-primary-1">
-            <img class="icon" src="/icons/square-list-svgrepo-com.svg" />
+            <img class="icon" src="src/assets/icons/square-list.svg" />
           </button>
           <button type="button" class="btn btn-primary btn-primary-1">
-            <img class="icon" src="/icons/plus-svgrepo-com.svg" />
+            <img class="icon" src="src/assets/icons/plus.svg" />
           </button>
           <button type="button" class="btn btn-primary btn-primary-1">
-            <img class="icon" src="/icons/filter-svgrepo-com.svg" />
+            <img class="icon" src="src/assets/icons/filter.svg" />
           </button>
           <button type="button" class="btn btn-primary btn-primary-1">
             <img
               class="icon"
-              src="/icons/arrow-up-from-bracket-svgrepo-com.svg"
+              src="src/assets/icons/arrow-up-from-bracket.svg"
             />
           </button>
         </div>

@@ -12,7 +12,7 @@ function MenuBurger() {
         role="button"
         aria-controls="project-menu"
       >
-        <img className="icon" src="/icons/filter-svgrepo-com.svg" />
+        <img className="icon" src="src/assets/icons/filter.svg" />
       </a>
       <div className="offcanvas offcanvas-top offcanvas-menu" id="project-menu">
         <div className="offcanvas-header">

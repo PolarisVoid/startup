@@ -5,11 +5,12 @@
     --royal-purple: #6c3baa;
 
     /*Golds*/
-    --golden-brown: #A06C2C;
-    --dark-goldenrod: #A06C2C;
-    --goldenrod: #D0A216;
-    --saffron: #E8BD0B;
-    --gold: #FFD700;
+    --golden-brown: #8B5E23;
+    --dark-goldenrod: #A5803C;
+    --satin-sheen-gold: #BEA155;
+    --old-gold: #CBB262;
+    --citron: #D8C36E;
+    --flax: #F1E486;
 
     /*Reds*/
     --auburn: #973835;
@@ -25,7 +26,7 @@
 
     --primary-1: var(--dark-scarlet);
     --primary-2: var(--ultra-voilet);
-    --accent-1: var(--goldenrod);
+    --accent-1: var(--satin-sheen-gold);
     --secondary-1: var(--rosewood);
     --secondary-2: var(--african-violet);
     --triary-1: var(--auburn);
