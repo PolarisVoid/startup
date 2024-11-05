@@ -93,12 +93,12 @@ body {
 }
 
 .btn-primary-1:hover {
-    background-color: var(--secondary-1);
+    background-color: var(--white);
     border-color: var(--secondary-1);
     color: var(--white);
 }
 
-.btn-primary-1:disabled {
+.btn-primary-1:active:focus {
     background-color: var(--primary-1);
     border-color: var(--primary-1);
     color: var(--accent-1);

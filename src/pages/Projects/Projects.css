@@ -47,3 +47,16 @@
     }
 }
 
+.btn-golden {
+    border: none;
+    cursor: pointer;
+}
+
+.btn-golden:hover {
+    color: var(--white);
+}
+
+.btn-golden:active:enabled {
+    color: var(--white);
+}
+

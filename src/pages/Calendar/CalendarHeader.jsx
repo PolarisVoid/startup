@@ -5,29 +5,29 @@ function NavigationHeader() {
     <div className="calendar-nav-header">
       <div className="d-flex justify-content-between align-items-center w-50">
         <button className="btn btn-primary btn-primary-1" id="prev-week">
-          <img className="icon" src="src/assets/icons/arrow-circle-left.svg" />
+          <img className="icon" src="/public/assets/icons/arrow-circle-left.svg" />
         </button>
         <h2 id="current-day" className="golden">
           7th September
         </h2>
         <button className="btn btn-primary btn-primary-1" id="next-week">
-          <img className="icon" src="src/assets/icons/arrow-circle-right.svg" />
+          <img className="icon" src="/public/assets/icons/arrow-circle-right.svg" />
         </button>
       </div>
       <div className="btn-group margin-right" role="group">
         <button type="button" className="btn btn-primary btn-primary-1">
-          <img className="icon" src="src/assets/icons/square-list.svg" />
+          <img className="icon" src="/public/assets/icons/square-list.svg" />
         </button>
         <button type="button" className="btn btn-primary btn-primary-1">
-          <img className="icon" src="src/assets/icons/plus.svg" />
+          <img className="icon" src="/public/assets/icons/plus.svg" />
         </button>
         <button type="button" className="btn btn-primary btn-primary-1">
-          <img className="icon" src="src/assets/icons/filter.svg" />
+          <img className="icon" src="/public/assets/icons/filter.svg" />
         </button>
         <button type="button" className="btn btn-primary btn-primary-1">
           <img
             className="icon"
-            src="src/assets/icons/arrow-up-from-bracket.svg"
+            src="/public/assets/icons/arrow-up-from-bracket.svg"
           />
         </button>
       </div>

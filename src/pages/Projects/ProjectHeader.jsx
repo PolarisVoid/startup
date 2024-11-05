@@ -12,7 +12,7 @@ function MenuBurger() {
         role="button"
         aria-controls="project-menu"
       >
-        <img className="icon" src="src/assets/icons/filter.svg" />
+        <img className="icon" src="/public/assets/icons/filter.svg" />
       </a>
       <div className="offcanvas offcanvas-top offcanvas-menu" id="project-menu">
         <div className="offcanvas-header">
@@ -40,7 +40,7 @@ function ProjectHeader() {
     <div className="nav project-header">
       <div className="left-container">
         <MenuBurger />
-        <h1>[project name]</h1>
+        <h1 className="golden">[project name]</h1>
       </div>
     </div>
   );
