@@ -1,5 +1,5 @@
 .landing-photo {
-    background-image: url("/public/assets/images/landing-page.avif");
+    background-image: url("/assets/images/landing-page.avif");
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -9,7 +9,7 @@
   }
   
   .empty-jar {
-    background-image: url("/public/assets/images/empty-jar.jpg");
+    background-image: url("/assets/images/empty-jar.jpg");
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -19,7 +19,7 @@
   }
   
   .rocks {
-    background-image: url("/public/assets/images/rocks.webp");
+    background-image: url("/assets/images/rocks.webp");
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -29,7 +29,7 @@
   }
   
   .pebbles {
-    background-image: url("/public/assets/images/pebbles.webp");
+    background-image: url("/assets/images/pebbles.webp");
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -39,7 +39,7 @@
   }
   
   .sand {
-    background-image: url("/public/assets/images/sand.webp");
+    background-image: url("/assets/images/sand.webp");
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -49,7 +49,7 @@
   }
   
   .filled-jar {
-    background-image: url("/public/assets/images/filled-jar.webp");
+    background-image: url("/assets/images/filled-jar.webp");
     background-attachment: fixed;
     background-size: cover;
     background-position: center;

@@ -72,8 +72,8 @@ function TaskTable() {
   TaskObject.beginSchedulingDate = "Monday";
 
   return (
-    <div>
-      <table className="table table-hover table-bordered ">
+    <div className="table-container">
+      <table className="table table-hover table-bordered">
         <thead>
           <tr>
             <th>Task Name</th>
@@ -107,7 +107,7 @@ function TaskTable() {
 
 function ProjectBody() {
   return (
-    <div>
+    <div class="project-body">
       <AccordionItemHeader id="Section1" title="Section Heading">
         <TaskTable />
       </AccordionItemHeader>
