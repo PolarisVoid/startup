@@ -27,17 +27,17 @@ function MobileNav({ userName, authState }) {
           <ul className="nav-items-list">
             <IconGroup
               to="/"
-              icon="/public/assets/icons/house-floor.svg"
+              icon="/assets/icons/house-floor.svg"
               text="Home"
             />
             <IconGroup
               to="/calendar"
-              icon="/public/assets/icons/calendar-day.svg"
+              icon="/assets/icons/calendar-day.svg"
               text="Calendar"
             />
             <IconGroup
               to="/projects"
-              icon="/public/assets/icons/list-check.svg"
+              icon="/assets/icons/list-check.svg"
               text="Projects"
             />
             {/* <IconGroup
@@ -47,12 +47,12 @@ function MobileNav({ userName, authState }) {
             /> */}
             {authState === AuthState.Authenticated && (<IconGroup
               to="/settings"
-              icon="/public/assets/icons/user-alt-1.svg"
+              icon="/assets/icons/user-alt-1.svg"
               text={userName}
             />)}
             {authState === AuthState.Unauthenticated && (<IconGroup
               to="/login"
-              icon="/public/assets/icons/user-alt-1.svg"
+              icon="/assets/icons/user-alt-1.svg"
               text="Login"
             />)}
           </ul>
