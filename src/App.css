@@ -52,6 +52,11 @@
 .viewport-50 {
     height: calc(100vh - 80px);
 }
+@media (max-width: 768px) {
+    .viewport-50 {
+        height: calc(150vh - 80px);
+    }
+}
 
 body {
     font-family: Calibri;
