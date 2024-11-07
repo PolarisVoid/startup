@@ -1,3 +1,6 @@
+import {AddTaskModalForm} from "./../components/forms/AddTask";
+import {AddTaskModalFormButton} from "./../components/forms/AddTask";
+
 function settings() {
   return (
     <>
@@ -76,6 +79,8 @@ function settings() {
           Save
         </button>
       </form>
+      <AddTaskModalFormButton />
+      <AddTaskModalForm />
     </>
   );
 }

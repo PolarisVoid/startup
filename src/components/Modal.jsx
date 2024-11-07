@@ -1,42 +1,37 @@
 export function ModalHeaderDefault({ title }) {
   return (
     <>
-      <h5 class="modal-title" id="exampleModalLongTitle">
+      <h5 className="modal-title">
         {title}
       </h5>
-      <button
-        type="button"
-        class="close"
-        data-dismiss="modal"
-        aria-label="Close"
-      >
-        <span aria-hidden="true">&times;</span>
-      </button>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
     </>
   );
 }
 
-export function ModalFooterDefault({}) {
+export function ModalFooterDefault({ button1, button2 }) {
   return (
     <>
-      <button type="button" class="btn btn-secondary" data-dismiss="modal">
-        Close
+      <button type="button" className="btn btn-secondary" data-dismiss="modal">
+        {button1}
       </button>
-      <button type="button" class="btn btn-primary-1">
-        Save changes
+      <button type="button" className="btn btn-primary-1">
+        {button2}
       </button>
     </>
   );
 }
 
-function Modal({id, header, footer, children }) {
+function Modal({ id, header, footer, children }) {
   return (
-    <div class="modal" tabindex="-1" role="dialog" id={id}>
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">{header}</div>
-          <div class="modal-body">{children}</div>
-          <div class="modal-footer">{footer}</div>
+    <div className="modal" tabindex="-1" role="dialog" id={id} aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div className="modal-dialog modal-dialog-centered" role="document">
+        <div className="modal-content">
+          <div className="modal-header">{header}</div>
+          <div className="modal-body">{children}</div>
+          <div className="modal-footer">{footer}</div>
         </div>
       </div>
     </div>
