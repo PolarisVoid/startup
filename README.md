@@ -81,3 +81,14 @@ For this Deliverable, I added CSS and Bootstrap to style the web page and give i
 - [x] **Application elements** - Used good contrast and styled the page to fit more like an app rather than a website. That is why the entire space is used.
 - [x] **Application text content** - Consistent fonts
 - [x] **Application images** - Added Icon SVG images to the nav for mobile and styled the logo and profile place holder for Desktop nav
+
+## React Deliverables
+
+For this Deliverable, I used Javascript and REact so that the application works for a single user. I also added placeholders for future technology.
+
+- [x] **Bundled and Transpiled** - Done
+- [x] **Components** - Calender and Project have components that are waiting for the database to load data.
+  - [x] **Calender** - Used for displaying blocked out items and tasks
+  - [x] **Projects** - Used for displaying a list of tasks and their properties.
+- [x] **Router** - Routing between Calender, Home, Projects, Login, Signup, and Settings Pages.
+- [x] **Hooks** - I used UseState to track logins and displaying different webpages based on if logged in or not.
