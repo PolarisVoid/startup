@@ -1,0 +1,18 @@
+.logo-container {
+    height: 100%;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-image-container {
+    height: 100%;
+    padding-right: 20px;
+}
+
+.profile-icon {
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+}

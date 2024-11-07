@@ -1,0 +1,11 @@
+.project-menu-container {
+    height: 100%;
+    width: 150px;
+    background-color: var(--primary-1);
+}
+
+@media (max-width: 800px) {
+    .project-menu-container {
+        display: none;
+    }
+}

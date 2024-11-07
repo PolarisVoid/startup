@@ -1,0 +1,12 @@
+.project-body {
+    height: calc(100% - 50px);
+    overflow-y: scroll;
+}
+
+.table-container {
+    overflow-x: scroll;
+}
+
+.table-container::-webkit-scrollbar {
+    display: none;
+}
