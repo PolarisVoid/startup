@@ -1,10 +1,24 @@
 import "./CalendarHeader.css";
 
 function NavigationHeader() {
+
+  function prevWeek() {
+    console.log("prevWeek");
+    fetch("/api/test", {
+      method: "post",
+      body: JSON.stringify({ thing: "<h1>Hello POST</h1>" }),
+      headers: { "Content-Type": "application/json" }
+    })
+      .then((response) => response.text())
+      .then((data) => {
+        console.log(data);
+      });
+  }
+
   return (
     <div className="calendar-nav-header">
       <div className="d-flex justify-content-between align-items-center w-50">
-        <button className="btn btn-primary btn-primary-1" id="prev-week">
+        <button className="btn btn-primary btn-primary-1" id="prev-week" onClick={() => prevWeek()}>
           <img className="icon" src="/assets/icons/arrow-circle-left.svg" />
         </button>
         <h2 id="current-day" className="golden">

@@ -3,7 +3,20 @@ const uuid = require('uuid');
 const app = express();
 
 // Data
-
+const events = [{
+    taskID: uuid.v4(),
+    teamID: uuid.v4(),
+    userID: uuid.v4(),
+    taskflowID: uuid.v4(),
+    commentID: uuid.v4(),
+    name: 'Event 1',
+    description: 'Description 1',
+    category: 'Category 1',
+    status: 'new',
+    startTime: new Date().setDate(new Date().getDate() + 1),
+    endTime: new Date().setDate(new Date().getDate() + 1),
+    timeRequired: 60
+}]
 
 // The service Port
 const port = process.argv.length > 2 ? process.argv[2] : 3000;

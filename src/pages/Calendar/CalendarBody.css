@@ -30,7 +30,7 @@
 
 .calendar-time {
     width: 100%;
-    height: 100px;
+    height: 60px;
     border-style: solid;
     border-width: 0px 1px 1px 0px;
     border-color: var(--black);
@@ -41,6 +41,7 @@
 
 .calendar-day {
     width: 100%;
+    position: relative;
 }
 
 .calendar-day:not(:first-child) {
@@ -53,4 +54,19 @@
     .calendar-day:not(:first-child) {
         display: none;
     }
+}
+.calendar-event {
+    position: absolute;
+    border: 0px;
+    border-top: 5px;
+    border-radius: 5px;
+    border-style: solid;
+    overflow: hidden;
+}
+
+.calendar-event-button {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 0px;
 }
