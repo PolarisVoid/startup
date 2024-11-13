@@ -25,7 +25,7 @@ const events = [{
     endTime: "2024-11-12T10:00:00"
 },{
     name: 'Event 2',
-    startTime: "2024-11-13T11:00:00",
+    startTime: "2024-11-13T11:30:00",
     endTime: "2024-11-13T12:00:00"
 }];
 
