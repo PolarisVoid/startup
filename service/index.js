@@ -1,5 +1,6 @@
 const express = require('express');
 const uuid = require('uuid');
+const path = require('path');
 const app = express();
 
 // The service Port
@@ -53,3 +54,7 @@ apiRouter.get('/tasks', (req, res) => {
 app.listen(port, () => {
     console.log(`Service listening on port ${port}`);
 });
+
+app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
+  });
