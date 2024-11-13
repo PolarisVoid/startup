@@ -42,4 +42,7 @@
     .calendar-day-header:not(:first-child) {
         display: none;
     }
+    .calendar-header {
+        padding: 0px;
+    }
 }
