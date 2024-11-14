@@ -39,10 +39,15 @@
 }
 
 @media (max-width: 800px) {
-    .calendar-day-header:not(:first-child) {
-        display: none;
-    }
     .calendar-header {
         padding: 0px;
+    }
+
+    .calendar-day-header {
+        display: none;
+    }
+
+    .calendar-day-header.current-day-header {
+        display: flex;
     }
 }

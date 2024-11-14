@@ -1,5 +1,6 @@
 import "./ProjectBody.css";
 import { AccordionItemHeader } from "../../components/Accordion";
+import { useEffect, useState } from "react";
 
 function AddTask() {
   return (
@@ -62,6 +63,57 @@ function Task({ task }) {
 }
 
 function TaskTable() {
+  const [tasksByDay, setTasksByDay] = useState({
+    Sunday: [],
+    Monday: [],
+    Tuesday: [],
+    Wednesday: [],
+    Thursday: [],
+    Friday: [],
+    Saturday: [],
+  });
+  useEffect(() => {
+    fetch("/api/tasks", {
+      method: "get",
+      headers: { user: localStorage.getItem("userId") },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        const sortedTasks = {
+          Sunday: [],
+          Monday: [],
+          Tuesday: [],
+          Wednesday: [],
+          Thursday: [],
+          Friday: [],
+          Saturday: [],
+        };
+
+        const dayNames = [
+          "Sunday",
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+        ];
+
+        data.forEach((task) => {
+          const taskDate = new Date(task.startTime);
+          const dayName = dayNames[taskDate.getDay()];
+          // Check if dayName exists in sortedTasks
+          if (sortedTasks[dayName]) {
+            sortedTasks[dayName].push(task);
+          } else {
+            console.warn(`Invalid dayName: ${dayName}`);
+          }
+        });
+
+        setTasksByDay(sortedTasks);
+      })
+  }, []);
+
   const TaskObject = new Object();
   TaskObject.name = "Example Task 1";
   TaskObject.dueDate = "Tuesday";

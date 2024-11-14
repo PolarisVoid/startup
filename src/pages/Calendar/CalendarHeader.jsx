@@ -1,30 +1,48 @@
 import "./CalendarHeader.css";
 
-function NavigationHeader() {
+function NavigationHeader({isMobile, currentDay, changeCurrentDay}) {
+
+  const monthIndex = [
+    "January", 
+    "February", 
+    "March", 
+    "April", 
+    "May", 
+    "June", 
+    "July", 
+    "August", 
+    "September", 
+    "October", 
+    "November", 
+    "December"
+  ]
 
   function prevWeek() {
-    console.log("prevWeek");
-    fetch("/api/test", {
-      method: "post",
-      body: JSON.stringify({ thing: "<h1>Hello POST</h1>" }),
-      headers: { "Content-Type": "application/json" }
-    })
-      .then((response) => response.text())
-      .then((data) => {
-        console.log(data);
-      });
+    if (isMobile) {
+      changeCurrentDay(new Date(currentDay.setDate(currentDay.getDate() - 1)));
+    } else {
+      changeCurrentDay(new Date(currentDay.setDate(currentDay.getDate() - 7)));
+    }
+  }
+
+  function nextWeek() {
+    if (isMobile) {
+      changeCurrentDay(new Date(currentDay.setDate(currentDay.getDate() + 1)));
+    } else {
+      changeCurrentDay(new Date(currentDay.setDate(currentDay.getDate() + 7)));
+    }
   }
 
   return (
     <div className="calendar-nav-header">
       <div className="d-flex justify-content-between align-items-center w-50">
-        <button className="btn btn-primary btn-primary-1" id="prev-week" onClick={() => prevWeek()}>
+        <button className="btn btn-primary btn-primary-1" id="prev-week" onClick={() => {prevWeek()}}>
           <img className="icon" src="/assets/icons/arrow-circle-left.svg" />
         </button>
         <h2 id="current-day" className="golden">
-          7th September
+          {monthIndex[currentDay.getMonth()]}
         </h2>
-        <button className="btn btn-primary btn-primary-1" id="next-week">
+        <button className="btn btn-primary btn-primary-1" id="next-week" onClick={() => {nextWeek()}}>
           <img className="icon" src="/assets/icons/arrow-circle-right.svg" />
         </button>
       </div>
@@ -49,18 +67,30 @@ function NavigationHeader() {
   );
 }
 
-function CalendarHeader() {
+function CalendarHeader({ isMobile, currentDay, changeCurrentDay }) {
+  const daysOfWeek = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
   return (
     <div className="calendar-header">
-      <NavigationHeader />
+      <NavigationHeader isMobile={isMobile} currentDay={currentDay} changeCurrentDay={changeCurrentDay}/>
       <div className="calendar-days-header">
-        <div className="calendar-day-header">Sun</div>
-        <div className="calendar-day-header">Mon</div>
-        <div className="calendar-day-header">Tue</div>
-        <div className="calendar-day-header">Wed</div>
-        <div className="calendar-day-header">Thu</div>
-        <div className="calendar-day-header">Fri</div>
-        <div className="calendar-day-header">Sat</div>
+        {daysOfWeek.map((day, index) => {
+          return (
+            <div
+              key={index}
+              className={isMobile && index !== currentDay.getDay() ? "calendar-day-header hidden" : "calendar-day-header current-day-header"}
+            >
+              <h3>{day.slice(0, 3)}</h3>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

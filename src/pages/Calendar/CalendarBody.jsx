@@ -69,7 +69,7 @@ function CalendarEvent({
   );
 }
 
-function CalendarDay({ height, day, tasks }) {
+function CalendarDay({ height, day, tasks, className }) {
   let hourheight = height / 24;  // Height per hour (since there are 24 hours in a day)
   tasks = day;  // Assign the tasks for the day
   // Function to convert ISO string time to hours and minutes
@@ -79,7 +79,7 @@ function CalendarDay({ height, day, tasks }) {
   };
 
   return (
-    <div className="calendar-day" style={{ height: `${height}px` }}>
+    <div className={className} style={{ height: `${height}px` }}>
       {tasks.map((task, index) => {
         const taskStartMinutes = getTimeInMinutes(task.startTime);  // Minutes since midnight
         const taskEndMinutes = getTimeInMinutes(task.endTime);
@@ -102,9 +102,8 @@ function CalendarDay({ height, day, tasks }) {
   );
 }
 
-function CalendarBody() {
+function CalendarBody({ user, isMobile, currentDay }) {
   const [calendarHeight, setCalendarHeight] = useState(100 * 24);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 800);
   const [tasksByDay, setTasksByDay] = useState({
     Sunday: [],
     Monday: [],
@@ -118,7 +117,7 @@ function CalendarBody() {
   useEffect(() => {
     fetch("/api/tasks", {
       method: "get",
-      headers: { user: "1" },
+      headers: { user: localStorage.getItem("userId") },
     })
       .then((response) => response.json())
       .then((data) => {
@@ -155,17 +154,7 @@ function CalendarBody() {
 
         setTasksByDay(sortedTasks);
       })
-      const handleResize = () => {
-        setIsMobile(window.innerWidth <= 800);
-      };
-  
-      window.addEventListener("resize", handleResize);
-  
-      // Cleanup on unmount
-      return () => window.removeEventListener("resize", handleResize);
   }, []);
-
-  const currentDayIndex = new Date().getDay();
   const daysOfWeek = [
     "Sunday",
     "Monday",
@@ -185,7 +174,7 @@ function CalendarBody() {
               key={day}
               height={calendarHeight}
               day={tasksByDay[day]}
-              className={isMobile && index !== currentDayIndex ? "calendar-day hidden" : "calendar-day current-day"}
+              className={isMobile && index !== currentDay.getDay() ? "calendar-day hidden" : "calendar-day current-day"}
             />
           ))}
         </div>

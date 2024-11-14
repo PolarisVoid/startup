@@ -57,6 +57,7 @@
   
     .calendar-day.current-day {
       display: block;
+      border: 0px;
     }
   }
 

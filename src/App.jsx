@@ -12,6 +12,7 @@ import Signup from "./pages/Signup";
 import Settings from "./pages/Settings";
 
 function App() {
+  const [userId, setUserId] = useState(localStorage.getItem("userId") || "");
   const [userName, setUserName] = useState(
     localStorage.getItem("userName") || ""
   );
@@ -19,6 +20,7 @@ function App() {
     ? AuthState.Authenticated
     : AuthState.Unauthenticated;
   const [authState, setAuthState] = useState(currentAuthState);
+  
 
   function onAuthChange(newUserName, newAuthState) {
     setUserName(newUserName);
@@ -33,7 +35,7 @@ function App() {
           <main className="h-100">
             <Routes>
               <Route path="/" element={<Home />} exact />
-              <Route path="/calendar" element={<Calendar />} />
+              <Route path="/calendar" element={<Calendar userName={userName}/>} />
               <Route path="/projects" element={<Projects />} />
               <Route path="/goals" element={<Goals />} />
               <Route
@@ -45,6 +47,7 @@ function App() {
                     onLogin={(loginUserName) => {
                       onAuthChange(loginUserName, AuthState.Authenticated);
                     }}
+                    setUserId={(id) => setUserId(id)}
                   />
                 }
               />

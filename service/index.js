@@ -30,21 +30,48 @@ const events = [{
     endTime: "2024-11-13T12:00:00"
 }];
 
+const users = [{
+    id: 1,
+    userName: 'test',
+    password: 'test'
+}];
+
 /*--------------------------------------------------------------*/
 /*                        API Routes                            */
 /*--------------------------------------------------------------*/
 
-apiRouter.get('/test', (req, res) => {
-    res.send({html:'<h1>Hello Get</h1>'});
-});
-
-apiRouter.post('/test', (req, res) => {
-    console.log(req.body);
-    res.send({html:'<h1>Hello POST</h1>'});
-});
-
 apiRouter.get('/tasks', (req, res) => {
+    userEvents = events.filter(event => event.userId === req.headers['user']);
     res.send(events);
+});
+
+apiRouter.post('/task', (req, res) => {
+    const task = req.body;
+    task.id = uuid.v4();
+    events.push(task);
+    res.send(task);
+});
+
+apiRouter.get('/user/login', (req, res) => {
+    const userName = req.headers['username'];
+    const password = req.headers['password'];
+    const user = users.find(user => user.userName === userName && user.password === password);
+    if (user) {
+        res.send({ "userid": user.id });
+    } else {
+        res.status(401).send({ error: 'Invalid username or password' });
+    }
+});
+
+apiRouter.post('/user/create', (req, res) => {
+    const { userName, password } = req.body;
+    if (users.find(user => user.userName === userName && user.password === password)) {
+        res.status(400).send({ error: 'User Already Exists' });
+    } else {
+        id = uuid.v4();
+        users.push({ id, userName, password });
+        res.send({ "user": id });
+    }
 });
 
 /*--------------------------------------------------------------*/

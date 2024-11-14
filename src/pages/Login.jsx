@@ -1,25 +1,56 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Login(props) {
   const [userName, setUserName] = useState(props.userName);
   const [password, setPassword] = useState("");
-  const [displayError, setDisplayError] = useState(null);
+  const [displayError, setDisplayError] = useState(false);
+  const navigate = useNavigate();
 
   async function loginUser() {
-    localStorage.setItem("userName", userName);
-    preprocessCSS.onLogin(userName);
+    fetch("/api/user/login", {
+      method: "get",
+      headers: { "userName": userName, "password": password }
+    }).then((response) => response.json())
+      .then((data) => {
+        if (data.error) {
+          setDisplayError(data.error);
+        } else {
+          props.onLogin(userName);
+          props.setUserId(data.userid);
+          localStorage.setItem("userName", userName);
+          localStorage.setItem("userId", data.userid);
+          navigate("/calendar");
+        }
+      });
   }
 
   async function createUser() {
-    localStorage.setItem("userName", userName);
-    props.onLogin(userName);
+    fetch("/api/user/create", {
+      method: "post",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ userName: userName, password: password }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.error) {
+          setDisplayError(data.error);
+        } else {
+          props.onLogin(userName);
+          props.setUserId(data.userid);
+          localStorage.setItem("userName", userName);
+          localStorage.setItem("userId", data.userid);
+          navigate("/calendar");
+        }
+      });
   }
+
   return (
     <div className="row justify-content-center">
       <div className="col-md-6">
-        <form method="get" action="./calendar">
+        <form onSubmit={(e) => e.preventDefault()}>
           <div className="mb-3">
-            <label for="username" className="form-label">
+            <label htmlFor="username" className="form-label">
               Username
             </label>
             <input
@@ -34,7 +65,7 @@ function Login(props) {
             />
           </div>
           <div className="mb-3">
-            <label for="password" className="form-label">
+            <label htmlFor="password" className="form-label">
               Password
             </label>
             <input
@@ -50,12 +81,27 @@ function Login(props) {
           <button
             type="submit"
             className="btn btn-primary-1"
-            onClick={() => loginUser()}
+            onClick={(e) => {
+              e.preventDefault();
+              loginUser();
+            }}
             disabled={!userName || !password}
           >
             Login
           </button>
+          <button
+            type="submit"
+            className="btn btn-primary-1"
+            onClick={(e) => {
+              e.preventDefault();
+              createUser();
+            }}
+            disabled={!userName || !password}
+          >
+            Create
+          </button>
         </form>
+        {displayError && <div className="alert alert-danger">{displayError}</div>}
       </div>
     </div>
   );
