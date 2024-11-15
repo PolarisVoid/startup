@@ -3,7 +3,7 @@ import CalendarBody from "./CalendarBody";
 import CalendarHeader from "./CalendarHeader";
 import { useState, useEffect } from "react";
 
-function Calendar({user}) {
+function Calendar({user, tasks}) {
   const [currentDay, setCurrentDay] = useState(new Date());
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 800);
 
@@ -18,7 +18,7 @@ function Calendar({user}) {
     <>
       <div className='calendar-container'>
         <CalendarHeader isMobile={isMobile} currentDay={currentDay} changeCurrentDay={(day) => {setCurrentDay(day)}}/>
-        <CalendarBody  user={user} isMobile={isMobile} currentDay={currentDay}/>
+        <CalendarBody  user={user} isMobile={isMobile} currentDay={currentDay} tasks={tasks}/>
       </div>
     </>
   );

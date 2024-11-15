@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useState } from "react";
 import { AuthState } from "./javascript/authState";
+import { getEvents } from "./javascript/getEvents";
 import Navbar from "./components/navbar/Navbar";
 import "./App.css";
 import Home from "./pages/Home";
@@ -13,6 +14,7 @@ import Settings from "./pages/Settings";
 
 function App() {
   const [userId, setUserId] = useState(localStorage.getItem("userId") || "");
+  const [userTasks, setUserTasks] = useState(getEvents(userId, new Date()));
   const [userName, setUserName] = useState(
     localStorage.getItem("userName") || ""
   );
@@ -35,7 +37,7 @@ function App() {
           <main className="h-100">
             <Routes>
               <Route path="/" element={<Home />} exact />
-              <Route path="/calendar" element={<Calendar userName={userName}/>} />
+              <Route path="/calendar" element={<Calendar userName={userName} tasks={userTasks}/>} />
               <Route path="/projects" element={<Projects />} />
               <Route path="/goals" element={<Goals />} />
               <Route

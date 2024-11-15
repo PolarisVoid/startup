@@ -60,7 +60,7 @@ function CalendarEvent({
   };
   return (
     <div className="calendar-event" style={divStyle}>
-      <button className="calendar-event-button" onClick={() => {}}>
+      <button className="calendar-event-button" onClick={() => { }}>
         <div className="event-header">
           <h3>{task.name}</h3>
         </div>
@@ -69,7 +69,7 @@ function CalendarEvent({
   );
 }
 
-function CalendarDay({ height, day, tasks, className }) {
+function CalendarDay({ height, day, holidays, tasks, className }) {
   let hourheight = height / 24;  // Height per hour (since there are 24 hours in a day)
   tasks = day;  // Assign the tasks for the day
   // Function to convert ISO string time to hours and minutes
@@ -77,10 +77,11 @@ function CalendarDay({ height, day, tasks, className }) {
     const date = new Date(timeString);
     return date.getHours() * 60 + date.getMinutes();  // Return total minutes since midnight
   };
+  console.log(holidays);
 
   return (
     <div className={className} style={{ height: `${height}px` }}>
-      {tasks.map((task, index) => {
+      {tasks.length > 0 && (tasks.map((task, index) => {
         const taskStartMinutes = getTimeInMinutes(task.startTime);  // Minutes since midnight
         const taskEndMinutes = getTimeInMinutes(task.endTime);
         const taskDuration = taskEndMinutes - taskStartMinutes;  // Duration in minutes
@@ -90,20 +91,47 @@ function CalendarDay({ height, day, tasks, className }) {
             key={index}
             height={(taskDuration / 60) * hourheight}
             width={100}
-            top={(taskStartMinutes / 60) * hourheight} 
+            top={(taskStartMinutes / 60) * hourheight}
             left={0}  // You can adjust left if you need multiple columns or areas for events
             background="#FF000055"
             border="#505050"
             task={task}
           />
         );
-      })}
+      }))}
+      {holidays.length > 0 && (holidays.map((task, index) => {
+        const taskStartMinutes = getTimeInMinutes(task.startTime);  // Minutes since midnight
+        const taskEndMinutes = getTimeInMinutes(task.endTime);
+        const taskDuration = taskEndMinutes - taskStartMinutes;  // Duration in minutes
+
+        return (
+          <CalendarEvent
+            key={index}
+            height={(taskDuration / 60) * hourheight}
+            width={100}
+            top={(taskStartMinutes / 60) * hourheight}
+            left={0}  // You can adjust left if you need multiple columns or areas for events
+            background="#00ff0055"
+            border="#505050"
+            task={task}
+          />
+        );
+      }))}
     </div>
   );
 }
 
 function CalendarBody({ user, isMobile, currentDay }) {
   const [calendarHeight, setCalendarHeight] = useState(100 * 24);
+  const [PublicHolidays, setPublicHolidays] = useState({
+    Sunday: [],
+    Monday: [],
+    Tuesday: [],
+    Wednesday: [],
+    Thursday: [],
+    Friday: [],
+    Saturday: [],
+  });
   const [tasksByDay, setTasksByDay] = useState({
     Sunday: [],
     Monday: [],
@@ -154,7 +182,51 @@ function CalendarBody({ user, isMobile, currentDay }) {
 
         setTasksByDay(sortedTasks);
       })
+    const url = "https://date.nager.at/api/v3/PublicHolidays/" + new Date().getFullYear() + "/US";
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => {
+        const sortedTasks = {
+          Sunday: [],
+          Monday: [],
+          Tuesday: [],
+          Wednesday: [],
+          Thursday: [],
+          Friday: [],
+          Saturday: [],
+        };
+
+        const dayNames = [
+          "Sunday",
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+        ];
+        let counter = 0;
+        data.forEach((task) => {
+          let taskDate = new Date(task.date);
+          taskDate.setDate(taskDate.getDate() + 1);
+          const dayName = dayNames[taskDate.getDay()];
+          task.startTime = new Date(taskDate);
+          task.endTime = new Date(taskDate);
+          task.startTime.setHours(task.startTime.getHours() - counter);
+          task.endTime.setHours(task.startTime.getHours() + 1);
+          // Check if dayName exists in sortedTasks
+          if (sortedTasks[dayName]) {
+            sortedTasks[dayName].push(task);
+          } else {
+            console.warn(`Invalid dayName: ${dayName}`); // Log a warning if the dayName is not valid
+          }
+          counter = counter + 1;
+        });
+
+        setPublicHolidays(sortedTasks);
+      })
   }, []);
+
   const daysOfWeek = [
     "Sunday",
     "Monday",
@@ -164,6 +236,8 @@ function CalendarBody({ user, isMobile, currentDay }) {
     "Friday",
     "Saturday",
   ];
+
+  console.log(PublicHolidays);
   return (
     <div className="calendar-body">
       <div className="calendar-scroll">
@@ -174,6 +248,7 @@ function CalendarBody({ user, isMobile, currentDay }) {
               key={day}
               height={calendarHeight}
               day={tasksByDay[day]}
+              holidays={PublicHolidays[day]}
               className={isMobile && index !== currentDay.getDay() ? "calendar-day hidden" : "calendar-day current-day"}
             />
           ))}
