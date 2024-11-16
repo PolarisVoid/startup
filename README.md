@@ -48,20 +48,20 @@ Are you a student or returned missionary overwhelmed by a busy schedule? **Pivot
 
 ### Technologies
 
-- **HTML** - Uses HTML to structure the application. Three HTML pages. One for Login, One for goals, and One for Calendar.
+- **HTML** - Uses HTML to structure the application. Three HTML pages. One for Login, and One for Calendar.
 - CSS - Styling of the application to provide consistency, and a premium experience while using the website.
 - **Javascript** - Adding, Removing, and updating events and tasks, setting goals, displaying calendar information, and calling webservices.
-- **React** - Dynamically updating the calendar and goals for the user.
+- **React** - Dynamically updating the calendar for the user.
 - **Webservice**
   - Get/Put User's Tasks
   - Get/Put User's Events
-  - Get/Put User's Goals
+  <!-- - Get/Put User's Goals -->
 - **Database and Authentication** - Store user's login credentials, tasks, and goals in database. Register and loging users. Won't save schedule unless they have an account.
-- **Web Socket** - As users add tasks and goals, it will be displayed on their calendar. These will update as they check off tasks, finish goals, etc.
+- **Web Socket** - As users add tasks, it will be displayed on their calendar. These will update as they check off tasks, finish goals, etc.
 
 ## HTML Deliverables
 
-For this Deliverable, I added the static content and built the structure of my application using HTML.
+For this deliverable, I added the static content and built the structure of my application using HTML.
 
 - [x] **HTML Pages** - Six Html Pages for settings, calendar, projects, goals, login, and the home page.
 - [x] **Links** - There is a navigation bar that links between the different pages. The Login page linkes to the calendar page.
@@ -73,7 +73,7 @@ For this Deliverable, I added the static content and built the structure of my a
 
 ## CSS Deliverables
 
-For this Deliverable, I added CSS and Bootstrap to style the web page and give it an application feel.
+For this deliverable, I added CSS and Bootstrap to style the web page and give it an application feel.
 
 - [x] **Header, Footer, and Main content** - Main page is going to have more of a langing page feel. Calendar, Project, and Goals page, have a simle design for their needs.
 - [x] **Navigation elements** - There is a nav bar on every page and it switched to a bottom nav for mobile.
@@ -84,7 +84,7 @@ For this Deliverable, I added CSS and Bootstrap to style the web page and give i
 
 ## React Deliverables
 
-For this Deliverable, I used Javascript and REact so that the application works for a single user. I also added placeholders for future technology.
+For this deliverable, I used Javascript and REact so that the application works for a single user. I also added placeholders for future technology.
 
 - [x] **Bundled and Transpiled** - Done
 - [x] **Components** - Calender and Project have components that are waiting for the database to load data.
@@ -92,3 +92,13 @@ For this Deliverable, I used Javascript and REact so that the application works 
   - [x] **Projects** - Used for displaying a list of tasks and their properties.
 - [x] **Router** - Routing between Calender, Home, Projects, Login, Signup, and Settings Pages.
 - [x] **Hooks** - I used UseState to track logins and displaying different webpages based on if logged in or not.
+
+## Service Deliverables
+
+For this deliverable, I added backend endpoints that recieve new tasks/events, get tasks/event, and create/login users.
+
+- [x] **Node.js/Express HTTP service** - done!
+- [x] **Static midddleware for frontend** - done!
+- [x] **Calls to third party endpoints** - I call a public holiday api that loads all the public holidays onto the calendar. For now it displays them all but in the future, it should only display them when that holiday comes up.
+- [x] **Backend service endpoints** - Placeholders for the login and events/tasks.
+- [x] **Frontend calls service endpoints** - The calendar fetches the events/tasks for a given user and renders them on the screen. The login checks if the user is in the "database" for authentication.
