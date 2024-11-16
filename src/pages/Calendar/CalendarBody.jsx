@@ -77,7 +77,6 @@ function CalendarDay({ height, day, holidays, tasks, className }) {
     const date = new Date(timeString);
     return date.getHours() * 60 + date.getMinutes();  // Return total minutes since midnight
   };
-  console.log(holidays);
 
   return (
     <div className={className} style={{ height: `${height}px` }}>
@@ -236,8 +235,6 @@ function CalendarBody({ user, isMobile, currentDay }) {
     "Friday",
     "Saturday",
   ];
-
-  console.log(PublicHolidays);
   return (
     <div className="calendar-body">
       <div className="calendar-scroll">
