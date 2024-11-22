@@ -29,12 +29,12 @@ function DesktopNav({ userName, authState }) {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/calendar">
+                <Link to={(authState === AuthState.Authenticated ? "/calendar" : '/login')}>
                   <h5 className="m-2">Calendar</h5>
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/projects">
+                <Link to={(authState === AuthState.Authenticated ? "/projects" : '/login')}>
                   <h5 className="m-2">Projects</h5>
                 </Link>
               </li>
@@ -50,11 +50,6 @@ function DesktopNav({ userName, authState }) {
                   <li className="nav-item">
                     <Link to="/login">
                       <h5 className="m-2">Login</h5>
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link to="/signup">
-                      <h5 className="m-2">Sign Up</h5>
                     </Link>
                   </li>
                 </>
