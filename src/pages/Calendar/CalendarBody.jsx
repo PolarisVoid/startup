@@ -144,10 +144,11 @@ function CalendarBody({ user, isMobile, currentDay }) {
   useEffect(() => {
     fetch("/api/tasks", {
       method: "get",
-      headers: { user: localStorage.getItem("userId") },
+      headers: { userid: localStorage.getItem("userId") },
     })
       .then((response) => response.json())
       .then((data) => {
+        console.log(data);  
         const sortedTasks = {
           Sunday: [],
           Monday: [],
@@ -167,7 +168,10 @@ function CalendarBody({ user, isMobile, currentDay }) {
           "Friday",
           "Saturday",
         ];
-
+        if (data.length === 0) {
+          setTasksByDay(sortedTasks);
+          return;
+        }
         data.forEach((task) => {
           const taskDate = new Date(task.startTime);
           const dayName = dayNames[taskDate.getDay()];
