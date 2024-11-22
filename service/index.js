@@ -26,7 +26,6 @@ app.use(`/api`, apiRouter);
 /*--------------------------------------------------------------*/
 
 apiRouter.get('/tasks', async (req, res) => {
-    console.log(req.headers.userid);
     const events = await DB.getEvents(req.headers.userid)
     res.send(events);
 });
