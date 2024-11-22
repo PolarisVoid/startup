@@ -5,6 +5,8 @@ const path = require('path');
 const app = express();
 const DB = require('./database.js');
 
+const authCookieName = 'token';
+
 // The service Port
 const port = process.argv.length > 2 ? process.argv[2] : 4000;
 
@@ -16,6 +18,8 @@ app.use(cookieParser());
 
 // Serve up the front-end static content hosting
 app.use(express.static('public'));
+
+app.set('trust proxy', true);
 
 // Router for service endpoints
 const apiRouter = express.Router();
@@ -73,7 +77,15 @@ apiRouter.post('/user/create', async (req, res) => {
 /*                  API Port Listening                          */
 /*--------------------------------------------------------------*/
 
-app.listen(port, () => {
+function setAuthCookie(res, token) {
+    res.cookie(authCookieName, token, {
+        httpOnly: true,
+        secure: true,
+        sameSite: 'strict',
+    });
+}
+
+const httpService = app.listen(port, () => {
     console.log(`Service listening on port ${port}`);
 });
 
