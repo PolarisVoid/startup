@@ -22,7 +22,7 @@ function App() {
     ? AuthState.Authenticated
     : AuthState.Unauthenticated;
   const [authState, setAuthState] = useState(currentAuthState);
-  
+
 
   function onAuthChange(newUserName, newAuthState) {
     setUserName(newUserName);
@@ -37,7 +37,7 @@ function App() {
           <main className="h-100">
             <Routes>
               <Route path="/" element={<Home />} exact />
-              <Route path="/calendar" element={<Calendar userName={userName} tasks={userTasks}/>} />
+              <Route path="/calendar" element={<Calendar userName={userName} tasks={userTasks} />} />
               <Route path="/projects" element={<Projects />} />
               <Route path="/goals" element={<Goals />} />
               <Route
@@ -54,7 +54,13 @@ function App() {
                 }
               />
               <Route path="/signup" element={<Signup />} />
-              <Route path="/settings" element={<Settings />} />
+              <Route path="/settings" element={<Settings
+                userName={userName}
+                authState={authState}
+                onLogout={(loginUserName) => {
+                  onAuthChange(loginUserName, AuthState.Unauthenticated);
+                }}
+                setUserId={(id) => setUserId(id)} />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
