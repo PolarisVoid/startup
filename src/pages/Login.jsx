@@ -7,42 +7,39 @@ function Login(props) {
   const [displayError, setDisplayError] = useState(false);
   const navigate = useNavigate();
 
-  async function loginUser() {
-    fetch("/api/user/login", {
+  async function loginUser(username, password) {
+    const response = await fetch("/api/user/login", {
       method: "get",
-      headers: { "userName": userName, "password": password }
-    }).then((response) => response.json())
-      .then((data) => {
-        if (data.error) {
-          setDisplayError(data.error);
-        } else {
-          props.onLogin(userName);
-          props.setUserId(data.userid);
-          localStorage.setItem("userName", userName);
-          localStorage.setItem("userId", data.userid);
-          navigate("/calendar");
-        }
-      });
+      headers: { "username": username, "password": password }
+    })
+    if (response.status === 200) {
+      const data = await response.json();
+      props.onLogin(username);
+      props.setUserId(data.id);
+      localStorage.setItem("userName", username);
+      localStorage.setItem("userId", data.id);
+      navigate("/calendar");
+    } else {
+      setDisplayError("Invalid username or password");
+    }
   }
 
   async function createUser() {
-    fetch("/api/user/create", {
+    const respont = fetch("/api/user/create", {
       method: "post",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ userName: userName, password: password }),
+      body: JSON.stringify({ username: userName, password: password }),
     })
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.error) {
-          setDisplayError(data.error);
-        } else {
-          props.onLogin(userName);
-          props.setUserId(data.userid);
-          localStorage.setItem("userName", userName);
-          localStorage.setItem("userId", data.userid);
-          navigate("/calendar");
-        }
-      });
+    if (response.status === 200) {
+      const data = await response.json();
+      props.onLogin(userName);
+      props.setUserId(data.id);
+      localStorage.setItem("userName", username);
+      localStorage.setItem("userId", data.id);
+      navigate("/calendar");
+    } else {
+      setDisplayError("Username already exists");
+    }
   }
 
   return (
@@ -83,7 +80,7 @@ function Login(props) {
             className="btn btn-primary-1"
             onClick={(e) => {
               e.preventDefault();
-              loginUser();
+              loginUser(userName, password);
             }}
             disabled={!userName || !password}
           >
