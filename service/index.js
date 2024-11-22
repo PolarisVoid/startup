@@ -1,7 +1,11 @@
+const cookieParser = require('cookie-parser');
 const express = require('express');
-const uuid = require('uuid');
+const bcrypt = require('bcrypt');
 const path = require('path');
 const app = express();
+const DB = require('./database.js');
+
+const authCookieName = 'token';
 
 // The service Port
 const port = process.argv.length > 2 ? process.argv[2] : 4000;
@@ -9,76 +13,79 @@ const port = process.argv.length > 2 ? process.argv[2] : 4000;
 // JSON body parsing using built-in middleware
 app.use(express.json());
 
+// Cookie parsing using built-in middleware
+app.use(cookieParser());
+
 // Serve up the front-end static content hosting
 app.use(express.static('public'));
 
+app.set('trust proxy', true);
+
 // Router for service endpoints
-var apiRouter = express.Router();
+const apiRouter = express.Router();
 app.use(`/api`, apiRouter);
-
-/*--------------------------------------------------------------*/
-/*                           Data                               */
-/*--------------------------------------------------------------*/
-
-const events = [{
-    name: 'Event 1',
-    startTime: "2024-11-12T09:00:00",
-    endTime: "2024-11-12T10:00:00"
-},{
-    name: 'Event 2',
-    startTime: "2024-11-13T11:30:00",
-    endTime: "2024-11-13T12:00:00"
-}];
-
-const users = [{
-    id: 1,
-    userName: 'test',
-    password: 'test'
-}];
 
 /*--------------------------------------------------------------*/
 /*                        API Routes                            */
 /*--------------------------------------------------------------*/
 
-apiRouter.get('/tasks', (req, res) => {
-    userEvents = events.filter(event => event.userId === req.headers['user']);
+apiRouter.get('/tasks', async (req, res) => {
+    const events = await DB.getEvents(req.headers.userid)
     res.send(events);
 });
 
 apiRouter.post('/task', (req, res) => {
-    const task = req.body;
-    task.id = uuid.v4();
-    events.push(task);
-    res.send(task);
+    if (!req.body.name || !req.body.startTime || !req.body.endTime) {
+        res.status(400).send({ error: 'Missing required fields' });
+        return;
+    }
+    var event = {
+        userID: req.body.userid,
+        name: req.body.name,
+        startTime: req.body.startTime,
+        endTime: req.body.endTime
+    }
+    event = DB.createEvent(event);
+    res.send(event);
 });
 
-apiRouter.get('/user/login', (req, res) => {
-    const userName = req.headers['username'];
-    const password = req.headers['password'];
-    const user = users.find(user => user.userName === userName && user.password === password);
+apiRouter.post('/user/create', async (req, res) => {
+    if (await DB.getUser(req.body.username)) {
+      res.status(409).send({ error: 'Existing user' });
+    } else {
+      const user = await DB.createUser(req.body.username, req.body.password);
+  
+      res.send({
+        id: user._id,
+      });
+    }
+  });
+  
+  // GetAuth token for the provided credentials
+  apiRouter.get('/user/login', async (req, res) => {
+    const user = await DB.getUser(req.headers.username);
     if (user) {
-        res.send({ "userid": user.id });
-    } else {
-        res.status(401).send({ error: 'Invalid username or password' });
+      if (await bcrypt.compare(req.headers.password, user.password)) {
+        res.send({ id: user._id });
+        return;
+      }
     }
-});
-
-apiRouter.post('/user/create', (req, res) => {
-    const { userName, password } = req.body;
-    if (users.find(user => user.userName === userName && user.password === password)) {
-        res.status(400).send({ error: 'User Already Exists' });
-    } else {
-        id = uuid.v4();
-        users.push({ id, userName, password });
-        res.send({ "user": id });
-    }
-});
+    res.status(401).send({ error: 'Unauthorized' });
+  });
 
 /*--------------------------------------------------------------*/
 /*                  API Port Listening                          */
 /*--------------------------------------------------------------*/
 
-app.listen(port, () => {
+function setAuthCookie(res, token) {
+    res.cookie(authCookieName, token, {
+        httpOnly: true,
+        secure: true,
+        sameSite: 'strict',
+    });
+}
+
+const httpService = app.listen(port, () => {
     console.log(`Service listening on port ${port}`);
 });
 

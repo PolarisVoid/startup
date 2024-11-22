@@ -102,3 +102,14 @@ For this deliverable, I added backend endpoints that recieve new tasks/events, g
 - [x] **Calls to third party endpoints** - I call a public holiday api that loads all the public holidays onto the calendar. For now it displays them all but in the future, it should only display them when that holiday comes up.
 - [x] **Backend service endpoints** - Placeholders for the login and events/tasks.
 - [x] **Frontend calls service endpoints** - The calendar fetches the events/tasks for a given user and renders them on the screen. The login checks if the user is in the "database" for authentication.
+
+## Login Deliverables
+
+For this deliverable, I added the mongoDB database connections and updated index.js to route to the database for grabing data and posting data.
+
+- [x] **MoongoDB Atlas database created** - done!
+- [x] **Stores data in MongoDB** - done!
+- [x] **User registration** - Creates a new account in the database.
+- [x] **Existing user** - Stores the Events/Tasks that are associated with a user.
+- [x] **Use MongoDB to store credentials** - Stores Events/Tasks and users.
+- [x] **Restricts Functionality** - You cannont vote until you have logged in. This is enforced on the frontend and backend.
