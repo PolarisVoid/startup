@@ -109,6 +109,24 @@ body {
     color: var(--accent-1);
 }
 
+.btn-primary-2 {
+    background-color: var(--primary-1);
+    border-color: var(--primary-1);
+    color: var(--accent-1);
+}
+
+.btn-primary-2:hover {
+    background-color: var(--accent-1);
+    border-color: var(--accent-1);
+    color: var(--primary-1);
+}
+
+.btn-primary-2:active:focus {
+    background-color: var(--accent-1);
+    border-color: var(--accent-1);
+    color: var(--primary-1);
+}
+
 .margin-left {
     margin-left: 5px;
 }
