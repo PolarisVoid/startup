@@ -108,7 +108,7 @@ function TaskTable() {
 
 function ProjectBody() {
   return (
-    <div class="project-body">
+    <div className="project-body">
       <AccordionItemHeader id="Section1" title="Section Heading">
         <TaskTable />
       </AccordionItemHeader>
