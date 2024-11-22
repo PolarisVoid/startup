@@ -147,8 +147,7 @@ function CalendarBody({ user, isMobile, currentDay }) {
       headers: { userid: localStorage.getItem("userId") },
     })
       .then((response) => response.json())
-      .then((data) => {
-        console.log(data);  
+      .then((data) => { 
         const sortedTasks = {
           Sunday: [],
           Monday: [],
