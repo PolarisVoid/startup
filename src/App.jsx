@@ -22,6 +22,7 @@ function App() {
     ? AuthState.Authenticated
     : AuthState.Unauthenticated;
   const [authState, setAuthState] = useState(currentAuthState);
+  
 
 
   function onAuthChange(newUserName, newAuthState) {
