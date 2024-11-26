@@ -96,11 +96,10 @@ function organizePublicHolidays(holidays) {
     holiday.endTime = new Date(holidayDate);
     holiday.startTime.setHours(holiday.startTime.getHours() - counter);
     holiday.endTime.setHours(holiday.startTime.getHours() + 1);
-    // Check if dayName exists in sortedTasks
     if (sortedHolidays[dayName]) {
       sortedHolidays[dayName].push(holiday);
     } else {
-      console.warn(`Invalid dayName: ${dayName}`); // Log a warning if the dayName is not valid
+      console.warn(`Invalid dayName: ${dayName}`); 
     }
     counter = counter + 1;
   });
@@ -108,7 +107,15 @@ function organizePublicHolidays(holidays) {
 }
 
 function organizeByProject(events) {
-  return;
+  if (!events || events.length === 0) {
+    return {};
+  }
+
+  return Object.entries(events).reduce((sortedEvents, [key, value]) => {
+    sortedEvents[value.project] = sortedEvents[value.project] || {};
+    sortedEvents[value.project][key] = value;
+    return sortedEvents;
+  }, {});
 }
 
 export { getEvents, organizeByDay, organizeByProject, organizePublicHolidays };

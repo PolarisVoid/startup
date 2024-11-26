@@ -1,5 +1,6 @@
 import "./ProjectHeader.css";
 import AccordionItem from "../../components/Accordion";
+import { capitalizeFirstLetter } from "../../javascript/stringManipulators";
 
 function MenuBurger() {
   return (
@@ -35,12 +36,13 @@ function MenuBurger() {
   );
 }
 
-function ProjectHeader() {
+function ProjectHeader({ selectedProject }) {
+  let header = selectedProject ? capitalizeFirstLetter(selectedProject) : "";
   return (
     <div className="nav project-header">
       <div className="left-container">
         <MenuBurger />
-        <h1 className="golden">[project name]</h1>
+        <h1 className="golden">{header}</h1>
       </div>
     </div>
   );

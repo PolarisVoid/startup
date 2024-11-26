@@ -4,6 +4,15 @@
     background-color: var(--primary-1);
 }
 
+.project-list-item {
+    padding: 0px 0px 0px 10px;
+    width: 100%;
+    text-align: start;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
 @media (max-width: 800px) {
     .project-menu-container {
         display: none;
