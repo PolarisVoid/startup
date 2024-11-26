@@ -2,7 +2,7 @@ import "./ProjectHeader.css";
 import AccordionItem from "../../components/Accordion";
 import { capitalizeFirstLetter } from "../../javascript/stringManipulators";
 
-function MenuBurger() {
+function MenuBurger({ changeSelectedProject, projectHeaders }) {
   return (
     <div>
       <a
@@ -24,10 +24,32 @@ function MenuBurger() {
         <div className="offcanvas-body">
           <div id="accordion">
             <AccordionItem id="myProjects" title="My Projects">
-              <button className="btn btn-sm golden">[DataBase Pull]</button>
+              {projectHeaders.map((project, index) => (
+                <button
+                  key={index}
+                  className="btn golden btn-golden project-list-item"
+                  onClick={() => changeSelectedProject(project)}
+                >
+                  {capitalizeFirstLetter(project)}
+                </button>
+              ))}
+              <button className="btn golden btn-golden project-list-item">
+                Add Project
+              </button>
             </AccordionItem>
             <AccordionItem id="sharedProjects" title="Shared Projects">
-              <button className="btn btn-sm golden">[DataBase Pull]</button>
+              {projectHeaders.map((project, index) => (
+                <button
+                  key={index}
+                  className="btn golden btn-golden project-list-item"
+                  onClick={() => changeSelectedProject(project)}
+                >
+                  {capitalizeFirstLetter(project)}
+                </button>
+              ))}
+              <button className="btn golden btn-golden project-list-item">
+                Add Project
+              </button>
             </AccordionItem>
           </div>
         </div>
@@ -36,12 +58,19 @@ function MenuBurger() {
   );
 }
 
-function ProjectHeader({ selectedProject }) {
+function ProjectHeader({
+  selectedProject,
+  changeSelectedProject,
+  projectHeaders,
+}) {
   let header = selectedProject ? capitalizeFirstLetter(selectedProject) : "";
   return (
     <div className="nav project-header">
       <div className="left-container">
-        <MenuBurger />
+        <MenuBurger
+          changeSelectedProject={changeSelectedProject}
+          projectHeaders={projectHeaders}
+        />
         <h1 className="golden">{header}</h1>
       </div>
     </div>

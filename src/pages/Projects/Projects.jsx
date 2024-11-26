@@ -30,7 +30,11 @@ function Projects() {
         projectHeaders={projectHeaders}
       />
       <div className="project-window">
-        <ProjectHeader selectedProject={selectedProject} />
+        <ProjectHeader selectedProject={selectedProject}
+        changeSelectedProject={(project) => {
+          setSelectedProject(project);
+        }}
+        projectHeaders={projectHeaders} />
         <ProjectBody selectedProject={selectedProject} projects={projects} />
       </div>
     </div>
