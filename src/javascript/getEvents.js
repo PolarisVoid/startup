@@ -118,4 +118,16 @@ function organizeByProject(events) {
   }, {});
 }
 
-export { getEvents, organizeByDay, organizeByProject, organizePublicHolidays };
+function organizeBySection(events) {
+  if (!events || events.length === 0) {
+    return {};
+  }
+  const sections = {}
+  for (let [key, value] of Object.entries(events)) {
+    sections[value.section] = sections[value.section] || {};
+    sections[value.section][key] = value;
+  }
+  return sections;
+}
+
+export { getEvents, organizeByDay, organizeByProject, organizePublicHolidays, organizeBySection };

@@ -35,7 +35,7 @@ function Projects() {
           setSelectedProject(project);
         }}
         projectHeaders={projectHeaders} />
-        <ProjectBody selectedProject={selectedProject} projects={projects} />
+        <ProjectBody project={projects[selectedProject]} />
       </div>
     </div>
   );
