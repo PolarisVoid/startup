@@ -1,5 +1,6 @@
 import "./CalendarBody.css";
 import { useState, useEffect } from "react";
+import { getEvents, organizeByDay, organizePublicHolidays } from "../../javascript/getEvents";
 
 function CalendarTime({ height, children }) {
   return (
@@ -48,7 +49,7 @@ function CalendarEvent({
   left,
   background,
   border,
-  task,
+  event,
 }) {
   const divStyle = {
     height: `${height}px`,
@@ -62,16 +63,16 @@ function CalendarEvent({
     <div className="calendar-event" style={divStyle}>
       <button className="calendar-event-button" onClick={() => { }}>
         <div className="event-header">
-          <h3>{task.name}</h3>
+          <h3>{event.name}</h3>
         </div>
       </button>
     </div>
   );
 }
 
-function CalendarDay({ height, day, holidays, tasks, className }) {
+function CalendarDay({ height, day, holidays, events, className }) {
   let hourheight = height / 24;  // Height per hour (since there are 24 hours in a day)
-  tasks = day;  // Assign the tasks for the day
+  events = day;  // Assign the events for the day
   // Function to convert ISO string time to hours and minutes
   const getTimeInMinutes = (timeString) => {
     const date = new Date(timeString);
@@ -80,39 +81,39 @@ function CalendarDay({ height, day, holidays, tasks, className }) {
 
   return (
     <div className={className} style={{ height: `${height}px` }}>
-      {tasks.length > 0 && (tasks.map((task, index) => {
-        const taskStartMinutes = getTimeInMinutes(task.startTime);  // Minutes since midnight
-        const taskEndMinutes = getTimeInMinutes(task.endTime);
-        const taskDuration = taskEndMinutes - taskStartMinutes;  // Duration in minutes
+      {Object.keys(events).length > 0 && (Object.entries(events).map(([key, event]) => {
+        const eventStartMinutes = getTimeInMinutes(event.startTime);  // Minutes since midnight
+        const eventEndMinutes = getTimeInMinutes(event.endTime);
+        const eventDuration = eventEndMinutes - eventStartMinutes;  // Duration in minutes
 
         return (
           <CalendarEvent
-            key={index}
-            height={(taskDuration / 60) * hourheight}
+            key={key}
+            height={(eventDuration / 60) * hourheight}
             width={100}
-            top={(taskStartMinutes / 60) * hourheight}
+            top={(eventStartMinutes / 60) * hourheight}
             left={0}  // You can adjust left if you need multiple columns or areas for events
             background="#FF000055"
             border="#505050"
-            task={task}
+            event={event}
           />
         );
       }))}
-      {holidays.length > 0 && (holidays.map((task, index) => {
-        const taskStartMinutes = getTimeInMinutes(task.startTime);  // Minutes since midnight
-        const taskEndMinutes = getTimeInMinutes(task.endTime);
-        const taskDuration = taskEndMinutes - taskStartMinutes;  // Duration in minutes
+      {holidays.length > 0 && (holidays.map((event, index) => {
+        const eventStartMinutes = getTimeInMinutes(event.startTime);  // Minutes since midnight
+        const eventEndMinutes = getTimeInMinutes(event.endTime);
+        const eventDuration = eventEndMinutes - eventStartMinutes;  // Duration in minutes
 
         return (
           <CalendarEvent
             key={index}
-            height={(taskDuration / 60) * hourheight}
+            height={(eventDuration / 60) * hourheight}
             width={100}
-            top={(taskStartMinutes / 60) * hourheight}
+            top={(eventStartMinutes / 60) * hourheight}
             left={0}  // You can adjust left if you need multiple columns or areas for events
             background="#00ff0055"
             border="#505050"
-            task={task}
+            event={event}
           />
         );
       }))}
@@ -120,7 +121,7 @@ function CalendarDay({ height, day, holidays, tasks, className }) {
   );
 }
 
-function CalendarBody({ user, isMobile, currentDay }) {
+function CalendarBody({ events, isMobile, currentDay }) {
   const [calendarHeight, setCalendarHeight] = useState(100 * 24);
   const [PublicHolidays, setPublicHolidays] = useState({
     Sunday: [],
@@ -131,101 +132,24 @@ function CalendarBody({ user, isMobile, currentDay }) {
     Friday: [],
     Saturday: [],
   });
-  const [tasksByDay, setTasksByDay] = useState({
-    Sunday: [],
-    Monday: [],
-    Tuesday: [],
-    Wednesday: [],
-    Thursday: [],
-    Friday: [],
-    Saturday: [],
+  const [eventsByDay, setEventsByDay] = useState({
+    Sunday: {},
+    Monday: {},
+    Tuesday: {},
+    Wednesday: {},
+    Thursday: {},
+    Friday: {},
+    Saturday: {}
   });
 
   useEffect(() => {
-    fetch("/api/tasks", {
-      method: "get",
-      headers: { userid: localStorage.getItem("userId") },
-    })
-      .then((response) => response.json())
-      .then((data) => { 
-        const sortedTasks = {
-          Sunday: [],
-          Monday: [],
-          Tuesday: [],
-          Wednesday: [],
-          Thursday: [],
-          Friday: [],
-          Saturday: [],
-        };
-
-        const dayNames = [
-          "Sunday",
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
-        ];
-        if (data.length === 0) {
-          setTasksByDay(sortedTasks);
-          return;
-        }
-        data.forEach((task) => {
-          const taskDate = new Date(task.startTime);
-          const dayName = dayNames[taskDate.getDay()];
-          // Check if dayName exists in sortedTasks
-          if (sortedTasks[dayName]) {
-            sortedTasks[dayName].push(task);
-          } else {
-            console.warn(`Invalid dayName: ${dayName}`); // Log a warning if the dayName is not valid
-          }
-        });
-
-        setTasksByDay(sortedTasks);
-      })
+    let events = getEvents();
+    setEventsByDay(organizeByDay(events));
     const url = "https://date.nager.at/api/v3/PublicHolidays/" + new Date().getFullYear() + "/US";
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
-        const sortedTasks = {
-          Sunday: [],
-          Monday: [],
-          Tuesday: [],
-          Wednesday: [],
-          Thursday: [],
-          Friday: [],
-          Saturday: [],
-        };
-
-        const dayNames = [
-          "Sunday",
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
-        ];
-        let counter = 0;
-        data.forEach((task) => {
-          let taskDate = new Date(task.date);
-          taskDate.setDate(taskDate.getDate() + 1);
-          const dayName = dayNames[taskDate.getDay()];
-          task.startTime = new Date(taskDate);
-          task.endTime = new Date(taskDate);
-          task.startTime.setHours(task.startTime.getHours() - counter);
-          task.endTime.setHours(task.startTime.getHours() + 1);
-          // Check if dayName exists in sortedTasks
-          if (sortedTasks[dayName]) {
-            sortedTasks[dayName].push(task);
-          } else {
-            console.warn(`Invalid dayName: ${dayName}`); // Log a warning if the dayName is not valid
-          }
-          counter = counter + 1;
-        });
-
-        setPublicHolidays(sortedTasks);
+        setPublicHolidays(organizePublicHolidays(data));
       })
   }, []);
 
@@ -247,7 +171,7 @@ function CalendarBody({ user, isMobile, currentDay }) {
             <CalendarDay
               key={day}
               height={calendarHeight}
-              day={tasksByDay[day]}
+              day={eventsByDay[day]}
               holidays={PublicHolidays[day]}
               className={isMobile && index !== currentDay.getDay() ? "calendar-day hidden" : "calendar-day current-day"}
             />

@@ -112,7 +112,7 @@ function ProjectBody() {
       <AccordionItemHeader id="Section1" title="Section Heading">
         <TaskTable />
       </AccordionItemHeader>
-      <AccordionItemHeader id="Section2" title="Section Heading">
+      <AccordionItemHeader id="Section2" title="Section Heading 2">
         <p>Websocket For Shared Projects</p>
         <TaskTable />
       </AccordionItemHeader>
