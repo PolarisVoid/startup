@@ -124,8 +124,8 @@ function organizeBySection(events) {
   }
   const sections = {}
   for (let [key, value] of Object.entries(events)) {
-    sections[value.section] = sections[value.section] || {};
-    sections[value.section][key] = value;
+    sections[value.subSection] = sections[value.subSection] || {};
+    sections[value.subSection][key] = value;
   }
   return sections;
 }
