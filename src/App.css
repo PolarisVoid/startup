@@ -1,136 +1,137 @@
 :root {
-    /*Purples*/
-    --ultra-voilet: #654597;
-    --african-violet: #9484AD;
-    --royal-purple: #6c3baa;
+  /*Purples*/
+  --ultra-voilet: #654597;
+  --african-violet: #9484ad;
+  --royal-purple: #6c3baa;
 
-    /*Golds*/
-    --golden-brown: #8B5E23;
-    --dark-goldenrod: #A5803C;
-    --satin-sheen-gold: #BEA155;
-    --old-gold: #CBB262;
-    --citron: #D8C36E;
-    --flax: #F1E486;
+  /*Golds*/
+  --golden-brown: #8b5e23;
+  --dark-goldenrod: #a5803c;
+  --satin-sheen-gold: #bea155;
+  --old-gold: #cbb262;
+  --citron: #d8c36e;
+  --flax: #f1e486;
 
-    /*Reds*/
-    --auburn: #973835;
-    --rosewood: #510D0A;
-    --dark-scarlet: #560319;
+  /*Reds*/
+  --auburn: #973835;
+  --rosewood: #510d0a;
+  --dark-scarlet: #560319;
 
-    /*Shades*/
-    --ivory: #FFFEEB;
-    --silver: #C3C3C3;
-    --platinum: #E1E1E1;
-    --isabelline: #F1EBE4;
-    --night: #070908;
+  /*Shades*/
+  --ivory: #fffeeb;
+  --Eggshell: #f5efde;
+  --silver: #c3c3c3;
+  --platinum: #e1e1e1;
+  --isabelline: #f1ebe4;
+  --night: #070908;
 
-    --primary-1: var(--dark-scarlet);
-    --primary-2: var(--ultra-voilet);
-    --accent-1: var(--satin-sheen-gold);
-    --secondary-1: var(--rosewood);
-    --secondary-2: var(--african-violet);
-    --triary-1: var(--auburn);
-    --triary-2: var(--royal-purple);
-    --white: var(--ivory);
-    --black: var(--night);
+  --primary-1: var(--dark-scarlet);
+  --primary-2: var(--ultra-voilet);
+  --accent-1: var(--satin-sheen-gold);
+  --secondary-1: var(--rosewood);
+  --secondary-2: var(--african-violet);
+  --triary-1: var(--auburn);
+  --triary-2: var(--royal-purple);
+  --white: var(--ivory);
+  --white-2: var(--Eggshell);
+  --black: var(--night);
 }
 
 .app {
-    height: 100vh;
-    overflow: hidden;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .viewport {
-    height: calc(100vh - 80px);
-    background-color: var(--white);
+  height: calc(100vh - 80px);
+  background-color: var(--white);
 }
 
 .viewport-100 {
-    height: calc(100vh - 80px);
+  height: calc(100vh - 80px);
 }
 
 .viewport-50 {
-    height: calc(100vh - 80px);
+  height: calc(100vh - 80px);
 }
 @media (max-width: 768px) {
-    .viewport-50 {
-        height: calc(150vh - 80px);
-    }
+  .viewport-50 {
+    height: calc(150vh - 80px);
+  }
 }
 
 body {
-    font-family: Calibri;
-    background-color: var(--white);
-    color: var(--black);
-    font-size: 16px;
-    line-height: 1.5;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  font-family: Calibri;
+  background-color: var(--white);
+  color: var(--black);
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .icon {
-    width: 24px;
-    height: 24px;
+  width: 24px;
+  height: 24px;
 }
 
 .golden {
-    color: var(--accent-1);
+  color: var(--accent-1);
 }
 
 .bg-red-gradient {
-    background: linear-gradient(var(--secondary-1), var(--primary-1));
+  background: linear-gradient(var(--secondary-1), var(--primary-1));
 }
 
 .bg-red-gradient-reverse {
-    background: linear-gradient(var(--primary-1), var(--secondary-1));
+  background: linear-gradient(var(--primary-1), var(--secondary-1));
 }
 
-
 .bg-white {
-    background-color: var(--white);
+  background-color: var(--white) !important;
 }
 
 .btn-primary-1 {
-    background-color: var(--primary-1);
-    border-color: var(--primary-1);
-    color: var(--accent-1);
+  background-color: var(--primary-1);
+  border-color: var(--primary-1);
+  color: var(--accent-1);
 }
 
 .btn-primary-1:hover {
-    background-color: var(--white);
-    border-color: var(--secondary-1);
-    color: var(--white);
+  background-color: var(--white);
+  border-color: var(--secondary-1);
+  color: var(--white);
 }
 
 .btn-primary-1:active:focus {
-    background-color: var(--primary-1);
-    border-color: var(--primary-1);
-    color: var(--accent-1);
+  background-color: var(--primary-1);
+  border-color: var(--primary-1);
+  color: var(--accent-1);
 }
 
 .btn-primary-2 {
-    background-color: var(--primary-1);
-    border-color: var(--primary-1);
-    color: var(--accent-1);
+  background-color: var(--primary-1);
+  border-color: var(--primary-1);
+  color: var(--accent-1);
 }
 
 .btn-primary-2:hover {
-    background-color: var(--accent-1);
-    border-color: var(--accent-1);
-    color: var(--primary-1);
+  background-color: var(--accent-1);
+  border-color: var(--accent-1);
+  color: var(--primary-1);
 }
 
 .btn-primary-2:active:focus {
-    background-color: var(--accent-1);
-    border-color: var(--accent-1);
-    color: var(--primary-1);
+  background-color: var(--accent-1);
+  border-color: var(--accent-1);
+  color: var(--primary-1);
 }
 
 .margin-left {
-    margin-left: 5px;
+  margin-left: 5px;
 }
 
 .margin-right {
-    margin-right: 5px;
+  margin-right: 5px;
 }

@@ -1,5 +1,3 @@
-import {AddTaskModalForm} from "./../components/forms/AddTask";
-import {AddTaskModalFormButton} from "./../components/forms/AddTask";
 import { useNavigate } from "react-router-dom";
 
 function Settings(props) {

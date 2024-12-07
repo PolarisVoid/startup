@@ -1,17 +1,38 @@
 import "./ProjectSideMenu.css";
 import AccordionItem from "../../components/Accordion";
+import { capitalizeFirstLetter } from "../../javascript/stringManipulators";
 
-function ProjectSideMenu() {
+function ProjectSideMenu({ changeSelectedProject, projectHeaders }) {
   return (
     <div className="project-menu-container">
       <div id="accordion">
         <AccordionItem id="myProjects" title="My Projects">
-          <button className="btn btn-sm golden btn-golden">[DataBase Pull]</button>
-          <button className="btn btn-sm golden btn-golden">Add Project</button>
+          {projectHeaders.map((project, index) => (
+            <button
+              key={index}
+              className="btn golden btn-golden project-list-item"
+              onClick={() => changeSelectedProject(project)}
+            >
+              {capitalizeFirstLetter(project)}
+            </button>
+          ))}
+          <button className="btn golden btn-golden project-list-item">
+            Add Projects
+          </button>
         </AccordionItem>
         <AccordionItem id="sharedProjects" title="Shared Projects">
-          <button className="btn btn-sm golden btn-golden">[DataBase Pull]</button>
-          <button className="btn btn-sm golden btn-golden">Add Project</button>
+          {projectHeaders.map((project, index) => (
+            <button
+              key={index}
+              className="btn golden btn-golden project-list-item"
+              onClick={() => changeSelectedProject(project)}
+            >
+              {capitalizeFirstLetter(project)}
+            </button>
+          ))}
+          <button className="btn golden btn-golden project-list-item">
+            Add Project
+          </button>
         </AccordionItem>
       </div>
     </div>

@@ -113,3 +113,12 @@ For this deliverable, I added the mongoDB database connections and updated index
 - [x] **Existing user** - Stores the Events/Tasks that are associated with a user.
 - [x] **Use MongoDB to store credentials** - Stores Events/Tasks and users.
 - [x] **Restricts Functionality** - You cannont vote until you have logged in. This is enforced on the frontend and backend.
+
+## Websocket Deliverables
+
+For this deliverable, I added a chat functionality on the home page.
+
+- [x] **Backend listens for WebSocket Connection** - done!
+- [x] **Frontend makes WebSocket Connection** - done!
+- [x] **Data sent over WebSocket Connection** - done!
+- [x] **WebSocket data displayed** - All users can see that chat at any given moment.

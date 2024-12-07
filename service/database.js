@@ -1,19 +1,21 @@
-const { MongoClient } = require('mongodb');
-const bcrypt = require('bcrypt');
-const uuid = require('uuid');
-const config = require('./dbConfig.json');
+const { MongoClient } = require("mongodb");
+const bcrypt = require("bcrypt");
+const uuid = require("uuid");
+const config = require("./dbConfig.json");
 
 const url = `mongodb+srv://${config.userName}:${config.password}@${config.hostname}`;
 const client = new MongoClient(url);
-const db = client.db('pivot');
-const userCollection = db.collection('users');
-const eventCollection = db.collection('events');
+const db = client.db("pivot");
+const userCollection = db.collection("users");
+const eventCollection = db.collection("events");
 
 (async function testConnection() {
   await client.connect();
   await db.command({ ping: 1 });
 })().catch((ex) => {
-  console.log(`Unable to connect to database with ${url} because ${ex.message}`);
+  console.log(
+    `Unable to connect to database with ${url} because ${ex.message}`
+  );
   process.exit(1);
 });
 
@@ -26,7 +28,13 @@ function getUser(username) {
 
 async function getEvents(userID) {
   const cursor = eventCollection.find({ userID: userID });
-  return cursor.toArray();
+  items = await cursor.toArray();
+  const itemsDict = {};
+  items.forEach((item) => {
+    // Assume each item has a unique `id` or `name` field for keying
+    itemsDict[item._id] = item;
+  });
+  return itemsDict;
 }
 
 async function createUser(username, password) {
@@ -60,5 +68,5 @@ module.exports = {
   getUser,
   createUser,
   getEvents,
-  createEvent
+  createEvent,
 };

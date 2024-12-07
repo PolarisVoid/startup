@@ -1,12 +1,52 @@
 .project-body {
-    height: calc(100% - 50px);
-    overflow-y: scroll;
+  height: calc(100% - 50px);
+  overflow-y: scroll;
 }
 
 .table-container {
-    overflow-x: scroll;
+  overflow-x: scroll;
 }
 
 .table-container::-webkit-scrollbar {
-    display: none;
+  display: none;
+}
+
+.task-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.task-cell {
+  text-align: start;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.task-cell > button {
+  padding: 2px 0px 2px 5px !important;
+  border: none;
+  margin: 0px;
+  width: 100%;
+  text-align: left;
+}
+
+.task-row:hover > * {
+  background-color: var(--white-2);
+}
+
+.task-cell:hover > button {
+  color: var(--triary-1) !important;
+}
+
+.task-cell-color {
+  background-color: var(--white);
+  border: 1px solid var(--black);
+}
+
+.task-header {
+  padding: 2px 0px 2px 5px;
+  background-color: var(--primary-1);
+  color: var(--accent-1);
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }

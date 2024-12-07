@@ -4,6 +4,7 @@ const bcrypt = require('bcrypt');
 const path = require('path');
 const app = express();
 const DB = require('./database.js');
+const { peerProxy } = require('./proxy.js');
 
 const authCookieName = 'token';
 
@@ -29,12 +30,12 @@ app.use(`/api`, apiRouter);
 /*                        API Routes                            */
 /*--------------------------------------------------------------*/
 
-apiRouter.get('/tasks', async (req, res) => {
+apiRouter.get('/events', async (req, res) => {
     const events = await DB.getEvents(req.headers.userid)
     res.send(events);
 });
 
-apiRouter.post('/task', (req, res) => {
+apiRouter.post('/events', (req, res) => {
     if (!req.body.name || !req.body.startTime || !req.body.endTime) {
         res.status(400).send({ error: 'Missing required fields' });
         return;
@@ -92,3 +93,5 @@ const httpService = app.listen(port, () => {
 app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
   });
+
+peerProxy(httpService);
