@@ -89,7 +89,7 @@ body {
 }
 
 .bg-white {
-  background-color: var(--white);
+  background-color: var(--white) !important;
 }
 
 .btn-primary-1 {
