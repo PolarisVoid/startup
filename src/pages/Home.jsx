@@ -1,6 +1,7 @@
 import React from "react";
 import "./Home.css";
 import Footer from "../components/Footer";
+import Chat from "../components/Chat";
 
 function SectionPicture({ title, analogy, description, img, children }) {
   let styling = "viewport-50 d-flex align-items-center justify-content-center";
@@ -185,6 +186,7 @@ function Home() {
         </div>
       </div>
       <Footer />
+      <Chat />
     </div>
   );
 }
