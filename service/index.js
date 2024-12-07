@@ -4,6 +4,7 @@ const bcrypt = require('bcrypt');
 const path = require('path');
 const app = express();
 const DB = require('./database.js');
+const { peerProxy } = require('./proxy.js');
 
 const authCookieName = 'token';
 
@@ -92,3 +93,5 @@ const httpService = app.listen(port, () => {
 app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
   });
+
+peerProxy(httpService);
