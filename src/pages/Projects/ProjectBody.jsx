@@ -18,7 +18,7 @@ function AddTask() {
   return (
     <tr className="task-row">
       <td className="task-cell task-cell-color">
-        <button className="btn p-0 text-muted btn-outline-none">
+        <button type="button" className="btn p-0 text-muted btn-outline-none" data-bs-toggle="modal" data-bs-target="#addTask">
           Add Task
         </button>
       </td>
